@@ -1,0 +1,57 @@
+// HAMBURGER
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    background-color: $color-white;
+    border: none;
+    border-radius: 5px;
+    outline-color: $color-blue;
+}
+
+.hamburger__box {
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.hamburger__inner {
+    @include hamburger-line;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-70%);
+    transition: background-color .1s .2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    @include hamburger-line;
+
+    content: "";
+    left: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.hamburger__inner::before {
+    top: -10px;
+}
+
+.hamburger__inner::after {
+    top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+    background-color: transparent;
+
+}
+
+.hamburger--active .hamburger__inner::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+}

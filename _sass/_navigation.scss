@@ -1,0 +1,88 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0px 5px 10px -1px rgba(133,129,129,0.47);
+
+    &__wrapper {
+        max-width: $max-width;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+
+    &__logo {
+        max-height: 40px;
+    }
+
+    .social-media {
+        display: flex;
+
+        &__item:first-child {
+            margin: 0 4rem 0 0;
+        }
+
+        &__img {
+            max-height: 40px;
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $color-white;
+        overflow-y: scroll;
+        transform: translateX(100%);
+        transition: all 1s cubic-bezier(0.2,1,0.3,1);
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        transform: translateX(50%);
+        transition: all 1s cubic-bezier(0.2,1,0.3,1);
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        margin: 2rem;
+    }
+
+    &__link {
+        font-size: $font-size-m*2;
+        color: $color-blue;
+        white-space: nowrap;
+    }
+
+    &__button {
+        font-family: $font-family-secondary;
+        font-size: $font-size-s*3;
+        background-color: $color-red;
+        color: $color-white;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+}
