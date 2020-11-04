@@ -32,7 +32,7 @@
 
     &__button {
         font-family: $font-family-secondary;
-        font-size: $font-size-s*3;
+        font-size: $font-size-s*2;
         background-color: $color-red;
         border: 2px solid $color-red;
         border-radius: 5px;
@@ -40,5 +40,57 @@
         padding: .5rem 1rem;
         white-space: nowrap;
         transition: all .3s ease;
+    }
+}
+
+// MEDIA QUERIES
+
+@include respond(tab-port) {
+
+    .hero {
+    
+        &__img {
+            max-width: 450px;
+        }
+    
+        .heading-primary {
+            font-size: $font-size-s*4;
+            -webkit-text-stroke-width: 2px;
+        }
+    
+        &__button {
+            font-size: $font-size-l*2;
+        }
+    }
+}
+
+@include respond(tab-land) {
+
+    .hero {
+    
+        &__img {
+            max-width: 650px;
+            margin-top: 2rem;
+        }
+    
+        .heading-primary {
+            font-size: $font-size-s*5 + .5rem;
+            margin: 2rem 0 15vh;
+        }
+    }
+}
+
+@include respond(desktop) {
+
+    .hero {
+    
+        &__img {
+            max-width: 750px;
+        }
+    
+        .heading-primary {
+            font-size: $font-size-m*4;
+            margin: 6rem 0 15vh;
+        }
     }
 }
