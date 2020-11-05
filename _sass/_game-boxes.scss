@@ -1,0 +1,90 @@
+.game-boxes {
+    
+    &__wrapper {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        display: flex;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 300px;
+
+        p {
+            max-width: 290px;
+            font-size: $font-size-m;
+            text-align: center;
+            line-height: 1.8;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: $color-red;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+       
+        i { 
+            color: $color-white;
+            font-size: $font-size-xl*2;
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@include respond(tab-port) {
+
+    .game-boxes {
+    
+        &__wrapper {
+            padding: 6rem 4rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@include respond(tab-land) {
+
+    .game-boxes {
+    
+        &__wrapper {
+            padding: 6rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__item {
+
+            p {
+                font-size: $font-size-l;
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+}

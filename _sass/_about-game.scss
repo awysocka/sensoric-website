@@ -68,7 +68,7 @@
 
         &__wrapper {
             margin-top: 6rem;
-            padding: 6rem 10rem;
+            padding: 6rem;
             background: url(/assets/images/about_game.png) no-repeat 0% 0%;
             background-size: cover;
         }
@@ -79,11 +79,11 @@
         }
     
         &__content {
-            width: 45%;
+            width: 40%;
             padding: 4rem;
 
             p {
-                font-size: $font-size-xl;
+                font-size: $font-size-l;
             }
 
             p:first-child {
