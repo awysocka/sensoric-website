@@ -13,7 +13,7 @@
     }
 
     &__img {
-        width: 70%;
+        width: 60%;
         max-width: 400px;
         margin-bottom: 2rem;
     }
@@ -35,3 +35,89 @@
         }
     }
 }
+
+// MEDIA QUERIES
+
+@include respond(tab-port) {
+    .about-game {
+
+        &__wrapper {
+            padding: 4rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background: url(/assets/images/about_game_mobile.png) no-repeat 0% 20%;
+            background-size: cover;
+        }
+    
+        &__img {
+            width: 35%;
+            margin: 0 4rem;
+        }
+    
+        &__content {
+            width: 50%;
+            max-width: 520px;
+        }
+    }
+}
+
+@include respond(tab-land) {
+    .about-game {
+
+        &__wrapper {
+            margin-top: 6rem;
+            padding: 6rem 10rem;
+            background: url(/assets/images/about_game.png) no-repeat 0% 0%;
+            background-size: cover;
+        }
+    
+        &__img {
+            width: 28%;
+            margin: 0 6rem 0 10rem;
+        }
+    
+        &__content {
+            width: 45%;
+            padding: 4rem;
+
+            p {
+                font-size: $font-size-xl;
+            }
+
+            p:first-child {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+
+@include respond(desktop) {
+    .about-game {
+
+        &__wrapper {
+            margin-top: 8rem;
+        }
+
+        &__img {
+            width: 35%;
+        }
+
+        &__content {
+            width: 45%;
+            padding: 4rem 6rem;
+
+            p {
+                font-size: $font-size-xl;
+            }
+
+            p:first-child {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+
+
+
