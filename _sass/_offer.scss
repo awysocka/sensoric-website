@@ -1,0 +1,135 @@
+.offer {
+
+    &__wrapper {
+        max-width: $max-width;
+        margin: 0 auto;
+        background-color: $color-turquoise;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    h2 {
+        font-family: $font-family-secondary;
+        font-size: $font-size-s*3;
+        color: $color-red;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $color-white;
+        margin-bottom: 2rem;
+    }
+
+    &__subtitle {
+        font-size: $font-size-m;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__boxes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 5px;
+        box-shadow: 1px 2px 8px -1px rgba(54,54,54,0.49);
+        flex: 0 1 230px;
+        margin: 2rem;
+        
+        h3 {
+            font-size: $font-size-xl;
+            line-height: 1.4;
+            font-weight: 700;
+            color: $color-white;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            padding: 2rem 1rem;
+
+            span {
+                display: block;
+            }
+        }
+
+        &--single {
+
+            h3 {
+                background-color: $color-light-green;
+            }
+        }
+
+        &--group {
+
+            h3 {
+                background-color: $color-red;
+            }
+        }
+    }
+
+    &__content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p {
+            font-size: $font-size-m;
+            margin-bottom: 3rem;
+        }
+
+        .offer__price {
+            
+            font-size: $font-size-l*2;
+            color: $color-light-green;
+            font-weight: 900;
+
+            span {
+                font-size: $font-size-xl;
+            }
+        }
+
+        .offer__icon {
+
+            i {
+                font-size: $font-size-l*2;
+                color: $color-red;
+            }
+        }
+    }
+
+    &__button {
+        font-size: $font-size-s*2;
+        color: $color-white;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+
+        &--red {
+            background-color: $color-red;
+        }
+
+        &--green {
+            background-color: $color-light-green;
+        }
+    }
+}
