@@ -15,7 +15,6 @@
     }
 
     &__item {
-        max-width: 320px;
         background-color: $color-red;
         padding: 2rem;
         margin: 2rem;
@@ -40,7 +39,6 @@
         font-family: $font-family-primary;
         color: $color-white;
         line-height: 1;
-        
     }
 
     span {
@@ -56,5 +54,37 @@
         align-self: flex-end;
         margin-top: auto;
         line-height: 1;
+    }
+}
+
+// MEDIA QUERIES
+
+@include respond(tab-port) {
+    .testimonials {
+
+        &__item {
+            max-width: 320px;
+        }
+    }
+}
+@include respond(tab-land) {
+    .testimonials {
+
+        &__wrapper {
+            padding: 6rem 4rem;
+        }
+    
+        &__list {
+            justify-content: space-between;  
+        }
+    
+        &__item {
+            padding: 3rem;
+            margin: 2rem;
+        }
+    
+        &__description {
+            margin-bottom: 4rem;
+        }
     }
 }
