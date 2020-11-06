@@ -6,6 +6,12 @@
     border-radius: 5px;
 }
 
+@mixin testimonials-paragraph {
+    color: $color-white;
+    font-size: $font-size-m;
+    font-style: italic;
+}
+
 @mixin respond($breakpoints) {
     @if $breakpoints == small-phone {
         @media screen and (max-width: 400px) {@content}

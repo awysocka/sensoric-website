@@ -92,10 +92,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 210px;
         
         p {
             font-size: $font-size-m;
-            margin-bottom: 3rem;
         }
 
         .offer__price {
@@ -123,6 +125,7 @@
         color: $color-white;
         padding: .5rem 1rem;
         border-radius: 5px;
+        white-space: nowrap;
 
         &--red {
             background-color: $color-red;
@@ -130,6 +133,71 @@
 
         &--green {
             background-color: $color-light-green;
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@include respond(tab-land) {
+
+    .offer {
+
+        &__wrapper {
+            padding: 6rem;
+        }
+
+        &__subtitle {
+            max-width: 800px;
+            margin-bottom: 6rem;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch; 
+        }
+
+        &__image {
+            width: 50%;
+            margin-right: 4rem;
+        }
+
+        &__boxes {
+            flex-wrap: nowrap;
+            margin-top: 0;
+        }
+
+        &__box {
+            margin: 0;
+        }
+
+        &__box:first-child {
+            margin-right: 2rem;
+        }
+
+        &__content {
+            
+            p {
+                font-size: $font-size-l;
+            }
+    
+            .offer__price {
+                
+                font-size: $font-size-l*3;
+    
+                span {
+                    font-size: $font-size-l*2;
+                }
+            }
+    
+            .offer__icon {
+    
+                i {
+                    font-size: $font-size-l*3;
+                }
+            }
         }
     }
 }
