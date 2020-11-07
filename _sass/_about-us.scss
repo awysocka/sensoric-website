@@ -3,7 +3,6 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding-bottom: 2rem;
     }
 
     &__banner {
@@ -46,8 +45,12 @@
             font-size: $font-size-m;
             line-height: 1.6;
             margin-bottom: 2rem;
-            max-width: 250px;
+            max-width: 350px;
             align-self: center;
+        }
+
+        .about-us__description {
+            margin-bottom: 4rem;
         }
     }
 
@@ -56,7 +59,40 @@
         font-size: $font-size-s*2;
         margin-bottom: 1rem;
     }
+}
 
-    
+// MEDIA QUERIES 
 
+@include respond(tab-port) {
+
+    .about-us {
+
+        &__banner {
+            min-height: 260px;
+            padding: 6rem 4rem;
+            background: url(/assets/images/about_us_img.jpg) no-repeat top;
+            background-size: cover;
+        }
+
+        &__list {
+            padding: 0 2rem;
+        }
+    }
+}
+
+@include respond(tab-land) {
+
+    .about-us {
+
+        &__banner {
+            min-height: 260px;
+            padding: 6rem;
+            background: url(/assets/images/about_us_img.jpg) no-repeat top;
+            background-size: cover;
+        }
+
+        &__list {
+            padding: 0 4rem;
+        }
+    }
 }
