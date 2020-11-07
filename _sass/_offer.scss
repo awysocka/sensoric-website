@@ -12,12 +12,7 @@
     }
 
     h2 {
-        font-family: $font-family-secondary;
-        font-size: $font-size-s*3;
-        color: $color-red;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $color-white;
-        margin-bottom: 2rem;
+        @include heading-secondary;
     }
 
     &__subtitle {

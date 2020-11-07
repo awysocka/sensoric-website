@@ -4,6 +4,13 @@
         max-width: $max-width;
         margin: 0 auto;
         padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading-secondary {
+        @include heading-secondary;
     }
 
     &__list {
@@ -80,7 +87,7 @@
     
         &__item {
             padding: 3rem;
-            margin: 2rem;
+            margin: 0 2rem;
         }
     
         &__description {
