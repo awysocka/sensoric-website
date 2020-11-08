@@ -24,13 +24,8 @@
     &__list-item {
         background-color: $color-light-green;
         border-radius: 5px;
-        transition: all 3s ease;
+        transition: all .3s ease;
     }
-
-    // &__list-item:hover {
-    //     cursor: pointer;
-    //     background-color: $color-dark-green;
-    // }
 
     &__list-item:not(:last-child) {
         margin-bottom: 1rem;
@@ -83,6 +78,27 @@
             display: block;
         }
     } 
+}
+
+//MEDIA QUERIES
+
+@include respond(tab-land) {
+
+    .faq {
+       &__wrapper {
+           padding: 6rem;
+       }
+    }
+}
+@include respond(not-touch-device) {
+
+    .faq {
+
+        &__list-item:hover {
+            cursor: pointer;
+            background-color: $color-dark-green;
+        }
+    }
 }
 
 
