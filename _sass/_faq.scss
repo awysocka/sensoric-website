@@ -82,6 +82,14 @@
 
 //MEDIA QUERIES
 
+@include respond(tab-port) {
+    .faq {
+        &__wrapper {
+            padding: 4rem;
+        }
+    }
+}
+
 @include respond(tab-land) {
 
     .faq {

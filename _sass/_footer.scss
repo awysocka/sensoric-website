@@ -1,0 +1,130 @@
+.footer {
+    background-color: $color-grey;
+
+    &__wrapper {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 30%;
+            margin: 2rem 0;
+        }
+
+        h3 {
+            color: $color-white;
+            font-size: $font-size-s*2;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            max-width: 550px;
+            color: $color-white;
+            font-size: $font-size-m;
+            line-height: 1.6;
+        }
+
+        a {
+            font-weight: 700; 
+            transition: color .3s ease;
+        }
+    }
+
+    &__nav {
+        border-top: 2px solid $color-white;
+        padding-top: 2rem;
+        color: $color-white;
+    }
+
+    &__terms {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        font-size: $font-size-m;
+        line-height: 1.6;
+        white-space: nowrap;
+    }
+
+    &__item {
+        margin-right: 2rem;
+        
+        a {
+            transition: color .3s ease;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: $font-size-xs*2;
+        line-height: 1.6;
+        white-space: nowrap;
+
+        a {
+            font-weight: 700; 
+            transition: color .3s ease;
+        }
+    }
+}
+
+//MEDIA QUERIES
+
+@include respond (tab-port) {
+    
+    .footer {
+        &__wrapper {
+            padding: 4rem;
+        }
+    
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+    
+            img {
+                max-width: 150px;
+                margin: 0;
+            }
+    
+            p {
+                margin-right: 4rem;
+            }
+        }
+
+        &__terms {
+            margin-bottom: 0;
+            flex-direction: row;
+        }
+    
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    
+        &__copyright {
+            align-items: flex-end;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+    
+    .footer {
+        a:hover {
+            color: $color-blue;
+        }
+    }
+}
