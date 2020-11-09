@@ -7,6 +7,7 @@
     box-shadow: 1px -1px 8px -1px rgba(54,54,54,0.49);
 
     &__wrapper {
+        height: 62px;
         max-width: $max-width;
         display: flex;
         justify-content: space-between;
@@ -21,13 +22,14 @@
 
     .social-media {
         display: flex;
+        margin: 2rem 0 0;
 
         &__item:first-child {
             margin: 0 4rem 0 0;
         }
 
         &__img {
-            max-height: 40px;
+            max-height: 30px;
         }
     }
 
@@ -77,15 +79,10 @@
     }
 
     &__button {
-        font-family: $font-family-secondary;
-        font-size: $font-size-s*3;
-        background-color: $color-red;
-        border: 2px solid $color-red;
-        border-radius: 5px;
-        color: $color-white;
-        padding: .5rem 1rem;
-        white-space: nowrap;
-        transition: all .3s ease;
+        font-family: $font-family-primary;
+        font-size: $font-size-m*2;
+        font-weight: 700;
+        color: $color-red;
     }
 }
 
@@ -94,9 +91,13 @@
 @include respond(tab-land) {
 
     .navigation {
+
+        &__logo {
+            margin-right: 2rem;
+        }
         &__menu {
             position: relative;
-            width: auto;
+            width: 100%;
             height: auto;
             padding: 0;
             flex-direction: row;
@@ -108,7 +109,6 @@
     
         &__list {
             flex-direction: row;
-            margin: 0 4rem;
             transform: translateX(0);
         }
 
@@ -121,25 +121,44 @@
         }
 
         &__link {
-            font-size: $font-size-xl;
-            transition: color .3s ease;
-        }
-
-        &__link:hover {
-            color: $color-red;
+            font-size: $font-size-s*2;
         }
 
         .social-media {
+            margin: 0;
     
             &__item:first-child {
                 margin: 0 1rem 0 0;
             }
         }
 
-        &__button:hover {
-            background-color: $color-white;
-            color: $color-red;
+        &__button {
+            font-size: $font-size-s*2;
+            margin: 0 2rem 0 auto;
         }
     }
 }
+
+@include respond(not-touch-device) {
+
+    .navigation {
+
+        &__link {
+            transition: color .3s ease;
+
+            &:hover {
+                color: $color-red;
+            }
+        }
+
+        &__button {
+            transition: all .3s ease;
+
+            &:hover {
+                color: $color-dark-red;
+            }
+        }
+    }
+}
+
 

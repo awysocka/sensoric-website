@@ -2,13 +2,6 @@
     <div class="navigation__wrapper">
         <a href="/" role="banner" aria-label="logo firmy"><img src="/assets/images/logo_sensoric.png" class="navigation__logo" alt="logo sensoric"></a>
         <div class="navigation__menu" id="navigation-menu">
-            <ul class="social-media">
-                {% for item in site.data.social-media-link.items %}
-                    <li class="social-media__item">
-                        <a href="{{ item.link }}" class="social-media__link" target="_blank" rel="noopener" aria-label="{{item.label}}"><img src="{{ item.source }}" class="social-media__img"></a>
-                    </li>
-                {% endfor %}
-            </ul>
             <ul class="navigation__list" id="nav-list">
                 {% for item in site.data.navigation.items %}
                     <li class="navigation__item">
@@ -16,8 +9,15 @@
                     </li>
                 {% endfor %}
             </ul>
-            <a href="#" class="navigation__button">Zaloguj się</a>
-        </div>
+            <a href="#" class="navigation__button">Zaloguj</a>
+            <ul class="social-media">
+                {% for item in site.data.social-media-link.items %}
+                    <li class="social-media__item">
+                        <a href="{{ item.link }}" class="social-media__link" target="_blank" rel="noopener" aria-label="{{item.label}}"><img src="{{ item.source }}" class="social-media__img"></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> 
         {% include hamburger-menu.html %}
     </div>
 </nav>
