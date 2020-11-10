@@ -1,9 +1,10 @@
 .about-game {
+    margin-top: 4rem;
 
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 8rem 2rem;
+        padding: 4rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -48,9 +49,9 @@
 @include respond(tab-port) {
 
     .about-game {
+        margin-top: 8rem;
 
         &__wrapper {
-            padding: 8rem 2rem;
             display: flex;
             background: url(/assets/images/about_game_background.png) no-repeat center;
             background-size: cover;
@@ -77,9 +78,10 @@
 
 @include respond(tab-land) {
     .about-game {
+        margin-top: 10rem;
 
         &__wrapper {
-            padding: 10rem 4rem;
+            padding: 6rem 4rem;
         }
     
         &__description {
@@ -104,10 +106,6 @@
 
     .about-game {
 
-        &__wrapper {
-            padding: 12rem 4rem;
-        }
-    
         &__description {
             width: 65%;
             max-width: 550px;
