@@ -4,7 +4,7 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
     }
 
     &__content {
@@ -83,7 +83,7 @@
     
     .footer {
         &__wrapper {
-            padding: 4rem;
+            padding: $padding-wrapper-tab-port 4rem;
         }
     
         &__content {

@@ -4,7 +4,7 @@
         max-width: $max-width;
         margin: 0 auto;
         background-color: $color-turquoise;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -134,13 +134,19 @@
 
 // MEDIA QUERIES
 
-@include respond(tab-land) {
+@include respond(tab-port) {
 
     .offer {
 
         &__wrapper {
-            padding: 6rem;
+            padding: $padding-wrapper-tab-port;
         }
+    }
+}
+
+@include respond(tab-land) {
+
+    .offer {
 
         &__subtitle {
             max-width: 800px;
@@ -169,7 +175,7 @@
         }
 
         &__box:first-child {
-            margin-right: 2rem;
+            margin-right: 4rem;
         }
 
         &__content {

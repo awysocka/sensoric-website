@@ -97,6 +97,17 @@
 
 // MEDIA QUERIES
 
+@include respond(tab-port) {
+
+    .navigation {
+
+        &__wrapper {
+
+            padding: 1rem 4rem;
+        }
+    }
+}
+
 @include respond(tab-land) {
 
     .navigation {

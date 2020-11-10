@@ -9,7 +9,7 @@
         min-height: 220px;
         background: url(/assets/images/about_us_img.jpg) no-repeat center;
         background-size: cover;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
         display: flex;
         justify-content: center;
     }
@@ -68,13 +68,14 @@
     .about-us {
 
         &__banner {
+            padding: $padding-wrapper-tab-port;
             min-height: 260px;
             background: url(/assets/images/about_us_img.jpg) no-repeat top;
             background-size: cover;
         }
 
         &__list {
-            padding: 0 2rem;
+            padding: 0 2rem 2rem;
         }
     }
 }
@@ -85,13 +86,9 @@
 
         &__banner {
             min-height: 260px;
-            padding: 6rem 4rem;
             background: url(/assets/images/about_us_img.jpg) no-repeat top;
             background-size: cover;
         }
 
-        &__list {
-            padding: 0 4rem;
-        }
     }
 }

@@ -4,7 +4,7 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -52,6 +52,7 @@
         margin-top: 8rem;
 
         &__wrapper {
+            padding: $padding-wrapper-tab-port;
             display: flex;
             background: url(/assets/images/about_game_background.png) no-repeat center;
             background-size: cover;
@@ -80,10 +81,6 @@
     .about-game {
         margin-top: 10rem;
 
-        &__wrapper {
-            padding: 6rem 4rem;
-        }
-    
         &__description {
 
             margin-top: 0;

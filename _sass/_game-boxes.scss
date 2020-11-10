@@ -3,7 +3,7 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
         display: flex;
     }
 
@@ -58,7 +58,7 @@
     .game-boxes {
     
         &__wrapper {
-            padding: 6rem 4rem;
+            padding: $padding-wrapper-tab-port;
             display: flex;
             justify-content: center;
         }
@@ -70,7 +70,6 @@
     .game-boxes {
     
         &__wrapper {
-            padding: 6rem;
             display: flex;
             justify-content: center;
         }

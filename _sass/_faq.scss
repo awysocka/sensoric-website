@@ -9,7 +9,7 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: $padding-wrapper-mobile;
     }
 
     .heading-secondary {
@@ -85,19 +85,11 @@
 @include respond(tab-port) {
     .faq {
         &__wrapper {
-            padding: 4rem;
+            padding: $padding-wrapper-tab-port;
         }
     }
 }
 
-@include respond(tab-land) {
-
-    .faq {
-       &__wrapper {
-           padding: 6rem;
-       }
-    }
-}
 @include respond(not-touch-device) {
 
     .faq {

@@ -30,7 +30,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         border-radius: 5px;
-        flex: 1 1 250px; 
+        flex: 1 1 260px; 
     }
 
     blockquote {
@@ -69,6 +69,10 @@
 @include respond(tab-port) {
     .testimonials {
 
+        &__wrapper {
+            padding: 6rem 2rem;
+        }
+
         &__item {
             max-width: 320px;
         }
@@ -76,10 +80,6 @@
 }
 @include respond(tab-land) {
     .testimonials {
-
-        &__wrapper {
-            padding: 6rem 4rem;
-        }
     
         &__list {
             justify-content: space-between;  
