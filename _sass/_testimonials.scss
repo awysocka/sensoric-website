@@ -22,15 +22,26 @@
     }
 
     &__item {
+        max-width: 320px;
         background-color: $color-red;
         padding: 2rem;
-        margin: 2rem;
+        margin: 4rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         border-radius: 5px;
-        flex: 1 1 260px; 
+        flex: 1 1 250px; 
+    }
+
+    &__photo {
+        max-width: 80px;
+        height: auto;
+        border: 3px solid $color-white;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+        align-self: center;
+        margin-top: -60px;
     }
 
     blockquote {
@@ -45,7 +56,7 @@
         font-size: $font-size-xl*2;
         font-family: $font-family-primary;
         color: $color-white;
-        line-height: 1;
+        line-height: .8;
     }
 
     span {
@@ -81,17 +92,18 @@
 @include respond(tab-land) {
     .testimonials {
     
-        &__list {
-            justify-content: space-between;  
-        }
-    
         &__item {
-            padding: 3rem;
-            margin: 0 2rem;
+            margin:  4rem 2rem 0;
         }
-    
-        &__description {
-            margin-bottom: 4rem;
+    }
+}
+
+@include respond(desktop) {
+
+    .testimonials {
+
+        &__wrapper {
+            padding: 10rem;
         }
     }
 }
