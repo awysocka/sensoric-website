@@ -6,9 +6,7 @@
 
     &__wrapper {
         width: 100%;
-        margin-top: 62px;
         max-width: $max-width;
-        padding: $padding-wrapper-mobile;
     }
 
     &__container {
@@ -140,17 +138,5 @@
         color: $color-red;
         font-size: $font-size-xs*2;
         margin-top: 5px;
-    }
-}
-
-//MEDIA QUERIES 
-
-@include respond(tab-port) {
-
-    .contact-form {
-
-        &__container {
-            padding: 4rem;
-        }
     }
 }
