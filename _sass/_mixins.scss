@@ -13,11 +13,10 @@
 }
 
 @mixin heading-secondary {
-    font-family: $font-family-secondary;
+    font-family: $font-family-primary;
     font-size: $font-size-s*3;
     color: $color-red;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: $color-white;
     margin-bottom: 2rem;
 }
 
