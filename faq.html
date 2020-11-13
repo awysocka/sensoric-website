@@ -1,0 +1,22 @@
+--- 
+layout: page
+title: FAQ
+---
+
+<div class="faq__wrapper--page">
+    <ul class="faq__list faq__page">
+        {% for item in site.data.faq.items %}
+            <li class="faq__list-item">
+                <a href="#" class="faq__link">
+                    {{ item.question }}
+                <i class="fas fa-chevron-down faq__down-arrow"></i>
+                <i class="fas fa-chevron-up faq__up-arrow"></i>
+                </a>
+                <div class="faq__answer">
+                    <p class="faq__text">{{ item.answer }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+

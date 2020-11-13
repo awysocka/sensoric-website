@@ -6,12 +6,15 @@
         max-width: $page-max-width;
         margin: 0 auto;
         padding: 8rem 2rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .heading-secondary {
         @include heading-secondary;
         font-weight: 400;
         margin-bottom: 4rem;
+        text-align: center;
     }
 
     p {

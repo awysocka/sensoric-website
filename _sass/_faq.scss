@@ -10,6 +10,12 @@
         align-items: center;
         margin: 0 auto;
         padding: $padding-wrapper-mobile;
+
+        &--page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .heading-secondary {
