@@ -16,12 +16,23 @@ body {
     font-family: $font-family-primary;
 }
 
+.site__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
-    outline-color: $color-blue;
     color: inherit;
 }
 
 ul {
     list-style: none;
+}
+
+button {
+    padding: 1rem 2rem;
+    border-radius: 9px;
+    font-size: $font-size-m;
 }

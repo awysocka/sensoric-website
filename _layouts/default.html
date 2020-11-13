@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+    <div class="site__wrapper">
+        {% include navigation-bar.html %}
 
-    {% include navigation-bar.html %}
+        {{ content }}
+    
+        {% include footer.html %}
 
-    {{ content }}
-
-    {% include footer.html %}
+    </div>
 
     <script src="/assets/js/script.js"></script>
 </body>
