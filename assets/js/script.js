@@ -90,7 +90,7 @@ const easeOutQuad = progress => {
 
 if (window.location.pathname === "/") {
 
-  const navLogoLink = document.querySelector('#nav-logo-link')
+  const navLogoLink = document.querySelector('#nav-logo-link');
   const arrowLink = document.querySelector('#arrow');
 
   arrowLink.addEventListener('click', smoothScroll);
@@ -106,7 +106,85 @@ if (window.location.pathname === "/") {
 
 }
 
+// FORM VALIDATION
 
+const form = document.querySelector('#contact-form');
+const nameInput = form.querySelector("#name");
+const nameValidationMessage = form.querySelector('#name-validation-message');
+const mailInput = form.querySelector("#mail");
+const mailValidationMessage = form.querySelector('#mail-validation-message');
+const messageInput = form.querySelector("#message");
+const messageValidationMessage = form.querySelector('#message-validation-message');
+const agreementCheckbox = form.querySelector("#agreement");
+const agreementValidationMessage = form.querySelector('#agreement-validation-message');
 
+function nameInputValidation() {
+  if (nameInput.value == null || nameInput.value === '') {
+    nameValidationMessage.innerText = 'Pole nie może być puste.';
+    nameInput.classList.add('invalid-value');
+    return false;
+  } else {
+    nameValidationMessage.innerText = '';
+    nameInput.classList.remove('invalid-value');
+    return true;
+  }
+}
 
+function mailInputValidation() {
+  if (mailInput.value == null || mailInput.value === '') {
+    mailValidationMessage.innerText = 'Pole nie może być puste.';
+    mailInput.classList.add('invalid-value');
+    return false;
+  } else if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(mailInput.value)) {
+    mailValidationMessage.innerText = 'Niepoprawny adres email';
+    mailInput.classList.add('invalid-value');
+    return false;
+  } else {
+    mailValidationMessage.innerText = '';
+    mailInput.classList.remove('invalid-value');
+    return true;
+  }
+}
 
+function messageInputValidation() {
+  if (messageInput.value == null || messageInput.value === '') {
+    messageValidationMessage.innerText = 'Pole nie może być puste.';
+    messageInput.classList.add('invalid-value');
+    return false;
+  } else {
+    messageValidationMessage.innerText = '';
+    messageInput.classList.remove('invalid-value');
+    return true;
+  }
+}
+
+function agreementInputValidation() {
+  if (!agreementCheckbox.checked) {
+    agreementValidationMessage.innerText = 'Pole jest wymagane.';
+    agreementCheckbox.classList.add('invalid-value');
+    return false;
+  } else {
+    agreementValidationMessage.innerText = '';
+    agreementCheckbox.classList.remove('invalid-value');
+    return true;
+  }
+}
+
+nameInput.addEventListener('input', nameInputValidation );
+mailInput.addEventListener('input', mailInputValidation );
+messageInput.addEventListener('input', messageInputValidation );
+agreementCheckbox.addEventListener('input', agreementInputValidation );
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(e);
+
+  if (nameInputValidation() 
+      && mailInputValidation() 
+      && messageInputValidation() 
+      && agreementInputValidation()
+  ) {
+
+    alert('Wysłano');
+
+  } 
+});

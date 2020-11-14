@@ -1,31 +1,35 @@
 
 <section class="contact-form">
     <div class="contact-form__wrapper">
-        <form class="contact-form__container">
+        <form class="contact-form__container" id="contact-form">
             <!-- <h2 class="heading-secondary">Formularz kontaktowy</h2> -->
             <ul class="contact-form__list">
                 <li class="contact-form__item">
                     <label for="name" class="required">Imię i Nazwisko</label>
-                    <input type="text" id="name" name="client_name" required>
-                    <!-- <p class="contact-form__error-message">Niepoprawne dane</p> -->
+                    <input type="text" id="name" name="client_name">
+                    <p class="contact-form__error-message" id="name-validation-message"></p>
                 </li>
                 <li class="contact-form__item">
                     <label for="mail" class="required">Adres e-mail</label>
-                    <input type="email" id="mail" name="client_email" required>
+                    <input type="email" id="mail" name="client_email">
+                    <p class="contact-form__error-message" id="mail-validation-message"></p>
                 </li>
                 <li class="contact-form__item">
                     <label for="phone">Numer telefonu</label>
                     <input type="tel" id="phone" name="client_phone">
+                    <p class="contact-form__error-message" id="phone-validation-message"></p>
                 </li>
                 <li class="contact-form__item">
                     <label for="message" class="required">Treść wiadomości</label>
-                    <textarea id="message" name="client__message" rows="6" required></textarea>
-                    <p class="contact-form__description">pola wymagane</p>
+                    <textarea id="message" name="client__message" rows="6"></textarea>
+                    <p class="contact-form__error-message" id="message-validation-message"></p>
                 </li>
                 <li class="contact-form__item contact-form__agreement">
                     <input type="checkbox" name="agreement" id="agreement">
                     <label for="agreement" class="required">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi wysłanego zapytania. Szczegółowe informację na temat przetwarzania danych osobowych znajdują się w zakładce <a href="#"> Polityka prywatności.</a></label>
                 </li>
+                <p class="contact-form__error-message" id="agreement-validation-message"></p>
+                <p class="contact-form__description">pola wymagane</p>
                 <li class="contact-form__item contact-form__item--button">
                     <button type="submit">Wyślij</button>
                 </li>

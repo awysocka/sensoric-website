@@ -29,6 +29,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        .contact-form__description {
+            margin-top: 5px;
+            font-size: $font-size-xs*2;
+        }
     }
 
     &__item {
@@ -55,11 +60,19 @@
             border: 1px solid $color-light-grey;
             border-radius: $box-radius;
             font-size: $font-size-m;  
+
+            &.invalid-value {
+                border: 2px solid $color-red ;
+            }
         }
 
         input:focus, textarea:focus {
             outline-style: auto;
-            outline-color: $color-grey; 
+            // outline-color: $color-grey;  
+            
+            &.invalid-value {
+                border: 2px solid $color-red ;
+            }
         }
 
         button {
@@ -72,13 +85,10 @@
     }
 
     &__item:not(:last-child) {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
-    &__description {
-        margin-top: 5px;
-        font-size: $font-size-xs*2;
-    }
+    
 
     &__description::before {
         content: "*";
@@ -105,6 +115,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                &.invalid-value {
+                    border: 2px solid $color-red ;
+                }
             }
 
             &[type="checkbox"]::after {
