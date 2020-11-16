@@ -1,5 +1,5 @@
 .about-game {
-    margin-top: 4rem;
+    margin-top: 6rem;
 
     &__wrapper {
         max-width: $max-width;
@@ -9,8 +9,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url(/assets/images/about_game_mobile.png) no-repeat bottom;
-        background-size: cover;
         overflow-y: hidden;
     }
 
@@ -20,98 +18,115 @@
 
     &__content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        margin-bottom: 6rem;
     }
 
-    &__description {
-        background-color: rgba(255,255,255, .8);
-        border-radius: 5px;
-        padding: 1rem;
+    &__button {
+        @include button;
+        font-size: $font-size-l;
+    }
 
-        p {
-            color: $color-dark-grey;
-            font-size: $font-size-m;
-            line-height: 1.6;
-            text-align: start;
+    &__paragraph {
+        color: $color-dark-grey;
+        font-size: $font-size-m;
+        line-height: 1.6;
+        text-align: start;
+        margin-bottom: 6rem;
+
+        &--highlighted {
+            font-size: $font-size-xl;
+            font-weight: 700;
+            color: $color-red;
+            display: block;
+            margin-bottom: 2rem;
         }
     }
 
     &__img {
+        border-radius: 50%;
         width: 100%;
-        max-width: 350px;
-        margin-bottom: -20rem;
+        margin-bottom: 4rem;
+        max-width: 400px;
+    }
+
+    &__video {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            text-align: center;
+            max-width: $max-width;
+            border-radius: $box-radius;
+        }
     }
 }
 
-// MEDIA QUERIES
+// // MEDIA QUERIES
 
 @include respond(tab-port) {
 
     .about-game {
-        margin-top: 8rem;
-
+        margin-top: 4;
+    
         &__wrapper {
             padding: $padding-wrapper-tab-port;
-            display: flex;
-            background: url(/assets/images/about_game_background.png) no-repeat center;
-            background-size: cover;
-        }
-
-        &__content {
-            width: 100%;
         }
     
-        &__description {
-            width: 60%;
-            max-width: 520px;
-            align-self: flex-start;
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8rem;
         }
 
+        &__description {
+            margin-right: 2rem;
+            max-width: 50%;
+        }
+    
         &__img {
             width: 50%;
-            max-width: 420px;
-            margin-top: -60px;
-            align-self: flex-end;
+            margin-bottom: 0;
         }
     }
 }
 
 @include respond(tab-land) {
     .about-game {
-        margin-top: 10rem;
 
-        &__description {
+        &__content {
+            margin-bottom: 10rem;
+        }
 
-            margin-top: 0;
-
-            p {
-                font-size: $font-size-l;
+        &__paragraph {
+            margin-bottom: 8rem;
+            font-size: $font-size-l;
+    
+            &--highlighted {
+                font-size: $font-size-s*4;
+                margin-bottom: 4rem;
             }
         }
 
         &__img {
-            width: 55%;
-            max-width: 450px;
-            margin-top: -95px;
-            margin-bottom: -30rem;
+            max-width: 580px;
         }
     }
 }
 
-@include respond(desktop) {
+@include respond(not-touch-device) {
 
     .about-game {
+        &__button {
 
-        &__description {
-            width: 65%;
-            max-width: 550px;
-            
-            p {
-                font-size: $font-size-s*2;
+            &:hover {
+                color: $color-white;
+                background-color: $color-red;
             }
         }
-
     }
 }
 

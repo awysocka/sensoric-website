@@ -3,14 +3,9 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-    }
-
-    &__banner {
-        min-height: 220px;
-        background: url(/assets/images/about_us_img.jpg) no-repeat center;
-        background-size: cover;
         padding: $padding-wrapper-mobile;
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -19,7 +14,6 @@
     }
 
     &__list {
-       margin-top: -100px;
        width: 100%;
        display: flex;
        flex-wrap: wrap;
@@ -32,32 +26,33 @@
         flex: 1 1 250px;
         justify-content: start;
         text-align: center;
+        margin-bottom: 4rem;
 
         img {
             margin: 0 auto 2rem;
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
             border: 3px solid $color-white;
             border-radius: 50%;
         }
-
-        p {
-            font-size: $font-size-m;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            max-width: 350px;
-            align-self: center;
-        }
-
-        .about-us__description {
-            margin-bottom: 4rem;
-        }
     }
 
-    .heading-fourth {
-        color: $color-red;
-        font-size: $font-size-s*2;
-        margin-bottom: 1rem;
+    &__paragraph {
+        font-size: $font-size-m;
+        line-height: 1.6;
+        align-self: center;
+        max-width: 350px;
+            
+        &--name {
+            color: $color-red;
+            font-size: $font-size-s*2;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &--profession {
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -66,16 +61,13 @@
 @include respond(tab-port) {
 
     .about-us {
+        // background: url(/assets/images/tree.png) no-repeat left 3%;
+        background: url(/assets/images/tree_2.png) no-repeat left top;
+        background-size: 55%;
 
-        &__banner {
+        &__wrapper {
             padding: $padding-wrapper-tab-port;
-            min-height: 260px;
-            background: url(/assets/images/about_us_img.jpg) no-repeat top;
-            background-size: cover;
-        }
-
-        &__list {
-            padding: 0 2rem 2rem;
+            padding-bottom: 0;
         }
     }
 }
@@ -83,12 +75,27 @@
 @include respond(tab-land) {
 
     .about-us {
+        // background: url(/assets/images/tree.png) no-repeat left 3%;
+        background: url(/assets/images/tree_2.png) no-repeat left top;
+        background-size: 50%;
+    }
+}
 
-        &__banner {
-            min-height: 260px;
-            background: url(/assets/images/about_us_img.jpg) no-repeat top;
-            background-size: cover;
-        }
 
+@include respond(desktop) {
+
+    .about-us {
+        // background: url(/assets/images/tree.png) no-repeat left 3%;
+        background: url(/assets/images/tree_2.png) no-repeat left top;
+        background-size: 45%;
+    }
+}
+
+@include respond(big-screen) {
+
+    .about-us {
+        // background: url(/assets/images/tree.png) no-repeat left 3%;
+        background: url(/assets/images/tree_2.png) no-repeat left top;
+        background-size: 35%;
     }
 }

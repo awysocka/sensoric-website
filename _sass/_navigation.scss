@@ -5,6 +5,7 @@
     width: 100%;
     background-color: $color-white;
     box-shadow: 1px -1px 8px -1px rgba(54,54,54,0.49);
+    z-index: 2;
 
     &__wrapper {
         height: 62px;
@@ -29,19 +30,6 @@
         }
     }
 
-    .social-media {
-        display: flex;
-        margin: 2rem 0 0;
-
-        &__item:first-child {
-            margin: 0 4rem 0 0;
-        }
-
-        &__img {
-            max-height: 30px;
-        }
-    }
-
     &__menu {
         position: fixed;
         top: 0;
@@ -51,7 +39,7 @@
         padding: 4rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         background-color: $color-white;
         overflow-y: scroll;
@@ -69,6 +57,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
+        margin-bottom: 4rem;
         transform: translateX(50%);
         transition: all 1s cubic-bezier(0.2,1,0.3,1);
 
@@ -83,15 +72,12 @@
 
     &__link {
         font-size: $font-size-m*2;
-        color: $color-blue;
+        color: $color-grey;
         white-space: nowrap;
     }
 
     &__button {
-        font-family: $font-family-primary;
-        font-size: $font-size-m*2;
-        font-weight: 700;
-        color: $color-red;
+        @include button;
     }
 }
 
@@ -102,7 +88,6 @@
     .navigation {
 
         &__wrapper {
-
             padding: 1rem 4rem;
         }
     }
@@ -112,13 +97,8 @@
 
     .navigation {
 
-        &__wrapper {
-            padding:  1rem 4rem;
-        }
-
         &__logo {
             
-
             &--visible {
                 margin-right: 4rem;
             }
@@ -138,6 +118,7 @@
         &__list {
             flex-direction: row;
             transform: translateX(0);
+            margin-bottom: 0;
         }
 
         &__item {
@@ -149,24 +130,11 @@
         }
 
         &__link {
-            font-size: $font-size-s*2;
-
-            &--colored {
-                color: $color-red;
-            }
-        }
-
-        .social-media {
-            margin: 0;
-    
-            &__item:first-child {
-                margin: 0 1rem 0 0;
-            }
+            font-size: $font-size-l;
         }
 
         &__button {
-            font-size: $font-size-s*2;
-            margin: 0 2rem 0 auto;
+            font-size: $font-size-l;
         }
     }
 }
@@ -184,10 +152,10 @@
         }
 
         &__button {
-            transition: all .3s ease;
 
             &:hover {
-                color: $color-dark-red;
+                color: $color-white;
+                background-color: $color-red;
             }
         }
     }

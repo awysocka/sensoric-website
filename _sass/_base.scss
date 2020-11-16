@@ -14,6 +14,7 @@ html {
 body {
     background: $color-white;
     font-family: $font-family-primary;
+    overflow-x: hidden;
 }
 
 .site__wrapper {

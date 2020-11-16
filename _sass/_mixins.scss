@@ -7,7 +7,7 @@
 }
 
 @mixin testimonials-paragraph {
-    color: $color-white;
+    color: $color-red;
     font-size: $font-size-m;
     font-style: italic;
 }
@@ -15,9 +15,20 @@
 @mixin heading-secondary {
     font-family: $font-family-primary;
     font-size: $font-size-s*3;
+    text-align: center;
     color: $color-red;
     -webkit-text-stroke-width: 1px;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+}
+
+@mixin button {
+    font-family: $font-family-primary;
+    font-size: $font-size-xl;
+    color: $color-red;
+    padding: 1rem 2rem;
+    border: 1px solid $color-red;
+    border-radius: $box-radius;
+    transition: all .3s ease;
 }
 
 @mixin respond($breakpoints) {
@@ -37,7 +48,19 @@
         @media screen and (min-width: 1367px) {@content}
     };
 
+    @if $breakpoints == big-screen {
+        @media screen and (min-width: 1920px) {@content}
+    };
+
     @if $breakpoints == not-touch-device {
         @media (hover: hover) {@content}
+    };
+
+    @if $breakpoints == landscape {
+        @media screen and (max-width: 1100px) and (max-height: 590px) and (orientation: landscape) {@content}
+    };
+
+    @if $breakpoints == portrait {
+        @media screen and (max-width: 1100px) and (min-height: 1020px) and (orientation: portrait) {@content}
     };
 }

@@ -3,7 +3,6 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        background-color: $color-turquoise;
         padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
@@ -15,21 +14,20 @@
         @include heading-secondary;
     }
 
-    &__subtitle {
-        font-size: $font-size-m;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
     &__container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    &__image {
-        width: 100%;
+    &__description {
+        max-width: 700px;
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $color-red;
+        line-height: 1.4;
+        text-align: center;
     }
 
     &__boxes {
@@ -45,13 +43,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $color-white;
-        border-radius: 5px;
-        box-shadow: 1px 2px 8px -1px rgba(54,54,54,0.49);
-        flex: 0 1 230px;
-        margin: 2rem;
+        background-color: $color-red;
+        border-radius: $box-radius;
+        flex: 1 1 200px;
+        margin: 1rem;
+        padding: 2rem 0;
         
-        h3 {
+        .heading-tertiary {
             font-size: $font-size-xl;
             line-height: 1.4;
             font-weight: 700;
@@ -66,24 +64,10 @@
                 display: block;
             }
         }
-
-        &--single {
-
-            h3 {
-                background-color: $color-light-green;
-            }
-        }
-
-        &--group {
-
-            h3 {
-                background-color: $color-red;
-            }
-        }
     }
 
     &__content {
-        padding: 2rem;
+        padding: 0 2rem 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,42 +77,39 @@
         
         p {
             font-size: $font-size-m;
+            color: $color-white;
         }
 
         .offer__price {
             
-            font-size: $font-size-l*2;
-            color: $color-light-green;
+            font-size: $font-size-xl*2;
+            color: $color-white;
             font-weight: 900;
+            margin: 4rem 0;
 
             span {
-                font-size: $font-size-xl;
+                font-size: $font-size-l;
             }
         }
 
         .offer__icon {
 
             i {
-                font-size: $font-size-l*2;
-                color: $color-red;
+                font-size: $font-size-xl*2;
+                color: $color-white;
             }
         }
     }
 
     &__button {
         font-size: $font-size-s*2;
-        color: $color-white;
-        padding: .5rem 1rem;
-        border-radius: 5px;
+        color: $color-red;
+        padding: 1rem 2rem;
+        border-radius: $box-radius;
+        border: 1px solid $color-white;
+        background-color: $color-white;
         white-space: nowrap;
-
-        &--red {
-            background-color: $color-red;
-        }
-
-        &--green {
-            background-color: $color-light-green;
-        }
+        transition: all .3s ease;
     }
 }
 
@@ -137,6 +118,8 @@
 @include respond(tab-port) {
 
     .offer {
+        background: url(/assets/images/tree_1.png) no-repeat top right;
+        background-size: 65%;
 
         &__wrapper {
             padding: $padding-wrapper-tab-port;
@@ -147,31 +130,36 @@
 @include respond(tab-land) {
 
     .offer {
-
-        &__subtitle {
-            max-width: 800px;
-            margin-bottom: 6rem;
-        }
+        // background: url(/assets/images/offer-tree.png) no-repeat top right;
+        background: url(/assets/images/tree_1.png) no-repeat top right;
+        background-size: 60%;
 
         &__container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: stretch; 
+            align-items: center; 
         }
 
-        &__image {
-            width: 50%;
-            margin-right: 4rem;
+        &__description {
+            font-size: $font-size-l*2;
+            text-align: start;
+            width: 45%;
+            max-width: 440px;
         }
 
         &__boxes {
+            max-width: 50%;
             flex-wrap: nowrap;
             margin-top: 0;
         }
 
         &__box {
             margin: 0;
+
+            .heading-tertiary {
+                font-size: $font-size-m*2;
+            }
         }
 
         &__box:first-child {
@@ -186,10 +174,10 @@
     
             .offer__price {
                 
-                font-size: $font-size-l*3;
+                font-size: $font-size-xl*2;
     
                 span {
-                    font-size: $font-size-l*2;
+                    font-size: $font-size-s*2;
                 }
             }
     
@@ -198,6 +186,38 @@
                 i {
                     font-size: $font-size-l*3;
                 }
+            }
+        }
+    }
+}
+
+@include respond(desktop) {
+    .offer {
+        // background: url(/assets/images/offer-tree.png) no-repeat top right;
+        background: url(/assets/images/tree_1.png) no-repeat top right;
+        background-size: 55%;
+    }
+
+}
+
+@include respond(big-screen) {
+
+    .offer {
+        // background: url(/assets/images/offer-tree.png) no-repeat top right;
+        background: url(/assets/images/tree_1.png) no-repeat top right;
+        background-size: 30%;
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .offer {
+
+        &__button {
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-red;
             }
         }
     }

@@ -1,9 +1,9 @@
 items:
-  - name: poznaj grę
+  - name: Poznaj grę
     link: /#poznaj-gre
-  - name: oferta
+  - name: Oferta
     link: /#oferta
-  - name: o nas
+  - name: O nas
     link: /#o-nas
-  - name: blog
-    link: '/blog'
+  - name: FAQ
+    link: '/faq'

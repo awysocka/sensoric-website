@@ -1,5 +1,6 @@
 .hero {
-    background: url(/assets/images/hero_image_blur.jpg) no-repeat center;
+    background: url(/assets/images/hero_mobile.jpg) no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     height: calc(90vh - 62px);
     margin-top: 62px;
@@ -15,7 +16,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        justify-content: center;
         padding: 2rem;
+        z-index: 1;
     }
 
     &__img {
@@ -24,12 +27,10 @@
     }
 
     .heading-primary {
-        font-family: $font-family-secondary;
-        color: $color-red;
+        font-family: $font-family-primary;
+        font-weight: 700;
+        color: #1a5d59;
         font-size: $font-size-xl;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $color-white;
-        margin: 1rem 0 10vh;
         text-align: center;
     }
 
@@ -60,14 +61,13 @@
 @include respond(tab-port) {
 
     .hero {
-    
+        
         &__img {
-            max-width: 450px;
+            max-width: 500px;
         }
     
         .heading-primary {
-            font-size: $font-size-s*4;
-            -webkit-text-stroke-width: 2px;
+            font-size: $font-size-s*3;
         }
     }
 }
@@ -75,15 +75,17 @@
 @include respond(tab-land) {
 
     .hero {
+        background: url(/assets/images/hero_web.jpg) no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
     
         &__img {
             max-width: 650px;
-            margin-top: 2rem;
+            margin-top: 4rem;
         }
     
         .heading-primary {
-            font-size: $font-size-s*5 + .5rem;
-            margin: 2rem 0 15vh;
+            font-size: $font-size-s*4;
         }
     }
 }
@@ -93,12 +95,13 @@
     .hero {
     
         &__img {
+            margin-top: 6rem;
             max-width: 750px;
         }
     
         .heading-primary {
             font-size: $font-size-m*4;
-            margin: 6rem 0 15vh;
+            margin: 2rem 0 12vh;
         }
     }
 }
@@ -114,5 +117,22 @@
                 background-color: $color-dark-red;
             }
         }
+    }
+}
+
+@include respond(landscape) {
+    
+    .hero {
+        background: url(/assets/images/hero_web_background.jpg) no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+@include respond(portrait) {
+    .hero {
+        background: url(/assets/images/hero_mobile.jpg) no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 }

@@ -1,4 +1,5 @@
 .testimonials {
+    background-color: $color-super-light-grey;
 
     &__wrapper {
         max-width: $max-width;
@@ -23,13 +24,14 @@
 
     &__item {
         max-width: 320px;
-        background-color: $color-red;
+        background-color: $color-white;
         padding: 2rem;
         margin: 4rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        border: 1px solid $color-red;
         border-radius: 5px;
         flex: 1 1 250px; 
     }
@@ -55,7 +57,7 @@
         position: relative;
         font-size: $font-size-xl*2;
         font-family: $font-family-primary;
-        color: $color-white;
+        color: $color-red;
         line-height: .8;
     }
 
@@ -81,7 +83,7 @@
     .testimonials {
 
         &__wrapper {
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
         }
 
         &__item {
@@ -98,12 +100,3 @@
     }
 }
 
-@include respond(desktop) {
-
-    .testimonials {
-
-        &__wrapper {
-            padding: 10rem;
-        }
-    }
-}

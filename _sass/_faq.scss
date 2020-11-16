@@ -1,8 +1,6 @@
 .faq {
     
     &__wrapper {
-        background: url(/assets/images/clouds.jpg) no-repeat fixed center;
-        background-size: cover;
         max-width: $max-width;
         display: flex;
         flex-direction: column;
@@ -28,8 +26,9 @@
     }
 
     &__list-item {
-        background-color: $color-light-green;
-        border-radius: 5px;
+        background-color: $color-white;
+        border: 1px solid $color-red;
+        border-radius: $box-radius;
         transition: all .3s ease;
     }
 
@@ -42,12 +41,17 @@
         text-decoration: none;
         display: flex;
         justify-content: space-between;
-        color: #fff;
+        color:$color-dark-grey;
         padding: 2rem;
         pointer-events: none;
+        transition: all .3s ease;
 
-        .faq__down-arrow, .faq__up-arrow {
-            color: rgba(255, 255, 255, .6);
+        .faq__down-arrow {
+            color: $color-red;
+        }
+
+        .faq__up-arrow {
+            color: $color-white;
         }
 
         .faq__up-arrow {
@@ -60,6 +64,8 @@
         overflow: hidden;
         position: relative;
         background-color: $color-white;
+        border-bottom-left-radius: $box-radius;
+        border-bottom-right-radius: $box-radius;
         transition: all .8s ease-out; 
     }
 
@@ -71,6 +77,12 @@
     }
 
     &__list-item--active {
+        background-color: $color-red;
+        
+
+        .faq__link {
+            color: $color-white;
+        }
 
         .faq__answer {
             max-height: 40rem;
@@ -90,8 +102,16 @@
 
 @include respond(tab-port) {
     .faq {
+        width: 100%;
+        background: url(/assets/images/grass.png) no-repeat bottom center;
+        background-size: cover;
+
         &__wrapper {
             padding: $padding-wrapper-tab-port;
+        }
+
+        &__list {
+            margin-bottom: 8rem;
         }
     }
 }
@@ -102,7 +122,16 @@
 
         &__list-item:hover {
             cursor: pointer;
-            background-color: $color-dark-green;
+            background-color: $color-dark-red;
+
+            .faq__link {
+                color: $color-white;
+
+                .faq__down-arrow {
+                    color: $color-white;
+                }
+        
+            }
         }
     }
 }

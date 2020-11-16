@@ -1,10 +1,10 @@
 items:
   - name: Instagram
     link: https://www.instagram.com
-    source: /assets/images/instagram.png
     label: instagram
+    icon: fab fa-instagram
   - name: Facebook
     link: https://facebook.com
-    source: /assets/images/facebook.png
     label: facebook
+    icon: fab fa-facebook-square
 

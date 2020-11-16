@@ -10,13 +10,6 @@
                 {% endfor %}
             </ul>
             <a href="#" class="navigation__button">Zaloguj</a>
-            <ul class="social-media">
-                {% for item in site.data.social-media-link.items %}
-                    <li class="social-media__item">
-                        <a href="{{ item.link }}" class="social-media__link" target="_blank" rel="noopener" aria-label="{{item.label}}"><img src="{{ item.source }}" class="social-media__img"></a>
-                    </li>
-                {% endfor %}
-            </ul>
         </div> 
         {% include hamburger-menu.html %}
     </div>

@@ -2,21 +2,28 @@
     <div class="footer__wrapper">
         <div class="footer__content">
             <div class="footer__description">
-                <h3>Phibox</h3>
-                <p>Działamy jako Sensoric spółka z ograniczoną odpowiedzialnością. Jesteśmy częścią spółki  <a href="http://phibox.eu">Phibox S. A.</a> . Jeśli chcesz dowiedzieć się o nas więcej zapraszamy na nasze konto <a href="https://www.linkedin.com/">Linked In</a>.</p>
+                <img src="/assets/images/phibox_logo.png" alt="logo phibox">
+                <p>Działamy jako Sensoric spółka z ograniczoną odpowiedzialnością. Jesteśmy częścią spółki  <a href="http://phibox.eu">Phibox&nbsp;S.&nbsp;A.</a>. Jeśli chcesz dowiedzieć się o nas więcej zapraszamy na nasze konto <a href="https://www.linkedin.com/">Linked&nbsp;In</a>.</p>
             </div>
-            <img src="/assets/images/phibox_logo.png" alt="logo phibox">
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__item"><a href="/form.html">Kontakt</a></li>
+                    <li class="footer__item"><a href="/legal-information.html">Informacje prawne</a></li>
+                    <li class="footer__item"><a href="/privacy-policy.html">Polityka prywatności</a></li>
+                    <li class="footer__item"><a href="/cookies.html">Cookies</a></li>
+                </ul>
+                <ul class="social-media">
+                    {% for item in site.data.social-media-link.items %}
+                        <li class="social-media__item">
+                            <a href="{{ item.link }}" class="social-media__link" target="_blank" rel="noopener" aria-label="{{item.label}}"><i class="{{ item.icon }}"></i></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </div>
-        <nav class="footer__nav">
-            <ul class="footer__terms">
-                <li class="footer__item"><a href="/legal-information.html">Informacje prawne</a></li>
-                <li class="footer__item"><a href="/privacy-policy.html">Polityka prywatności</a></li>
-                <li class="footer__item"><a href="/cookies.html">Cookies</a></li>
-            </ul>
-            <div class="footer__copyright">
-                <p>© 2020 Sensoric</p>
-                <p>Realizacja <a href="https://annawysocka.pl/">Anna Wysocka</a></p>
-            </div>
-        </nav>
+        <div class="footer__copyright">
+            <p>© 2020 Sensoric</p>
+            <p>Realizacja <a href="https://annawysocka.pl/">Anna Wysocka</a></p>
+        </div>
     </div>
 </footer>
