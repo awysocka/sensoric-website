@@ -13,6 +13,7 @@
 }
 
 @mixin heading-secondary {
+    margin: 0;
     font-family: $font-family-primary;
     font-size: $font-size-s*3;
     text-align: center;

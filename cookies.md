@@ -1,6 +1,7 @@
 --- 
 layout: page
 title: Polityka Cookies
+markdown: true
 ---
 
 Wykorzystanie plików cookies w serwisach internetowych Sensoric
