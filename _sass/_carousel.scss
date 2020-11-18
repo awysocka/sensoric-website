@@ -46,7 +46,6 @@
     }
 }
 
-
 @keyframes slide {
     0% {
         opacity: .8;
@@ -56,13 +55,5 @@
     100% {
         opacity: 1;
         transform: scale(1);
-    }
-}
-
-@include respond(tab-port) {
-    
-    .slider {
-        width: 60%;
-        max-width: 600px;
     }
 }
