@@ -4,50 +4,52 @@
     line-height: 1.6;
     text-align: start;
     margin-bottom: 2rem;
+}
 
-    &--highlighted {
-        font-size: $font-size-xl;
-        font-weight: 700;
-        color: $color-red;
-        display: block;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+.paragraph--highlighted {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $color-red;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-    &--highlighted-small {
-        font-size: $font-size-s*2;
-        color: $color-red;
-        text-align: center;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
+.paragraph--highlighted-small {
+    font-size: $font-size-l;
+    color: $color-red;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
 
-    &--white {
-        color: $color-white;
-    }
+.paragraph--white {
+    color: $color-white;
+}
 
-    &--center {
-        text-align: center;
-        max-width: 310px;
-    }
+.paragraph--center {
+    text-align: center;
+    max-width: 310px;
+    min-height: 56px;
+    margin-bottom: 1rem;
+}
 
-    &--faq {
-        padding: 2rem;
-        margin: 0;
-    }
+.paragraph--faq {
+    padding: 2rem;
+    margin: 0;
+}
 
-    &--justify {
-        text-align: justify;
-        margin-bottom: 4rem;
-        align-self: center;
-    }
+.paragraph--justify {
+    text-align: justify;
+    margin-bottom: 4rem;
+    align-self: center;
+}
 
-    &--strong {
-        font-size: $font-size-l;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 4rem;
-    }
+.paragraph--strong {
+    font-size: $font-size-l;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .heading-primary {
@@ -60,7 +62,7 @@
 
 .heading-secondary {
     @include heading-secondary;
-    max-width: 990px;
+    max-width: 90%;
 }
 
 .heading-tertiary {
@@ -80,11 +82,12 @@
         font-size: $font-size-s*3;
     }
 
-    .paragraph {
+    .paragraph--strong {
+        max-width: 90%;
+    }
 
-        &--strong {
-            max-width: 100%;
-        }
+    .paragraph--highlighted-small {
+        font-size: $font-size-s*2;
     }
 }
 
@@ -92,18 +95,22 @@
 
     .paragraph {
         font-size: $font-size-l;
-
-        &--highlighted {
-            font-size: $font-size-s*4;
-            margin-bottom: 4rem;
-        }
-        
-        &--strong {
-            margin-bottom: 8rem;
-            font-size: $font-size-s*2;
-        }
     }
 
+    .paragraph--highlighted {
+        font-size: $font-size-s*4;
+        margin-bottom: 4rem;
+    }
+
+    .paragraph--highlighted-small {
+        font-size: $font-size-s*2;
+    }
+    
+    .paragraph--strong {
+        margin-bottom: 8rem;
+        font-size: $font-size-s*2;
+    }
+    
     .heading-primary {
         font-size: $font-size-s*4;
     }
