@@ -45,5 +45,8 @@ logo-visible-on-start: false
     </div>
 
     <script src="/assets/js/script.js"></script>
+    {% if page.additional-script %}
+        <script src="{{ page.additional-script }}"></script>
+    {% endif %}
 </body>
 </html>
