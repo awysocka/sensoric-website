@@ -10,10 +10,6 @@
         align-items: center;
     }
 
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
     &__list {
         width: 100%;
         display: flex;
@@ -28,13 +24,6 @@
         justify-content: center;
         align-items: center;
         flex: 1 1 300px;
-
-        p {
-            max-width: 290px;
-            font-size: $font-size-m;
-            text-align: center;
-            line-height: 1.8;
-        }
     }
 
     &__item:not(:last-child) {
@@ -60,36 +49,36 @@
 
 // MEDIA QUERIES
 
-@include respond(tab-port) {
+// @include respond(tab-port) {
 
-    .game-boxes {
+//     .game-boxes {
     
-        &__wrapper {
-            padding: 0 4rem 8rem;
-            display: flex;
-            justify-content: center;
-        }
-    }
-}
+//         &__wrapper {
+//             padding: 0 4rem 8rem;
+//             display: flex;
+//             justify-content: center;
+//         }
+//     }
+// }
 
-@include respond(tab-land) {
+// @include respond(tab-land) {
 
-    .game-boxes {
+//     .game-boxes {
     
-        &__wrapper {
-            display: flex;
-            justify-content: center;
-        }
+//         &__wrapper {
+//             display: flex;
+//             justify-content: center;
+//         }
 
-        &__item {
+//         &__item {
 
-            p {
-                font-size: $font-size-l;
-            }
-        }
+//             p {
+//                 font-size: $font-size-l;
+//             }
+//         }
 
-        &__item:not(:last-child) {
-            margin-bottom: 0;
-        }
-    }
-}
+//         &__item:not(:last-child) {
+//             margin-bottom: 0;
+//         }
+//     }
+// }

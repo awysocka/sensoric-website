@@ -9,10 +9,6 @@
         justify-content: center;
     }
 
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
     &__list {
        width: 100%;
        display: flex;
@@ -36,24 +32,6 @@
             border-radius: 50%;
         }
     }
-
-    &__paragraph {
-        font-size: $font-size-m;
-        line-height: 1.6;
-        align-self: center;
-        max-width: 350px;
-            
-        &--name {
-            color: $color-red;
-            font-size: $font-size-s*2;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        &--profession {
-            margin-bottom: 1rem;
-        }
-    }
 }
 
 // MEDIA QUERIES 
@@ -61,7 +39,6 @@
 @include respond(tab-port) {
 
     .about-us {
-        // background: url(/assets/images/tree.png) no-repeat left 3%;
         background: url(/assets/images/tree_2.png) no-repeat left top;
         background-size: 55%;
 
@@ -75,7 +52,6 @@
 @include respond(tab-land) {
 
     .about-us {
-        // background: url(/assets/images/tree.png) no-repeat left 3%;
         background: url(/assets/images/tree_2.png) no-repeat left top;
         background-size: 50%;
     }
@@ -85,7 +61,6 @@
 @include respond(desktop) {
 
     .about-us {
-        // background: url(/assets/images/tree.png) no-repeat left 3%;
         background: url(/assets/images/tree_2.png) no-repeat left top;
         background-size: 45%;
     }
@@ -94,7 +69,6 @@
 @include respond(big-screen) {
 
     .about-us {
-        // background: url(/assets/images/tree.png) no-repeat left 3%;
         background: url(/assets/images/tree_2.png) no-repeat left top;
         background-size: 35%;
     }

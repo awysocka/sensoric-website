@@ -12,10 +12,6 @@
         overflow-y: hidden;
     }
 
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
     &__content {
         display: flex;
         flex-direction: column-reverse;
@@ -28,21 +24,7 @@
         font-size: $font-size-l;
     }
 
-    &__paragraph {
-        color: $color-dark-grey;
-        font-size: $font-size-m;
-        line-height: 1.6;
-        text-align: start;
-        margin-bottom: 6rem;
 
-        &--highlighted {
-            font-size: $font-size-xl;
-            font-weight: 700;
-            color: $color-red;
-            display: block;
-            margin-bottom: 2rem;
-        }
-    }
 
     &__img {
         border-radius: 50%;
@@ -63,7 +45,7 @@
     }
 }
 
-// // MEDIA QUERIES
+// MEDIA QUERIES
 
 @include respond(tab-port) {
 
@@ -99,16 +81,6 @@
 
         &__content {
             margin-bottom: 10rem;
-        }
-
-        &__paragraph {
-            margin-bottom: 8rem;
-            font-size: $font-size-l;
-    
-            &--highlighted {
-                font-size: $font-size-s*4;
-                margin-bottom: 4rem;
-            }
         }
 
         &__img {

@@ -1,0 +1,96 @@
+.paragraph {
+    color: $color-dark-grey;
+    font-size: $font-size-m;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 2rem;
+
+    &--highlighted {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $color-red;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    &--highlighted-small {
+        font-size: $font-size-s*2;
+        color: $color-red;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &--white {
+        color: $color-white;
+    }
+
+    &--center {
+        text-align: center;
+        max-width: 300px;
+    }
+
+    &--faq {
+        padding: 2rem;
+        margin: 0;
+    }
+}
+
+.heading-primary {
+    font-family: $font-family-primary;
+    font-weight: 700;
+    color: #1a5d59;
+    font-size: $font-size-xl;
+    text-align: center;
+}
+
+.heading-secondary {
+    @include heading-secondary;
+}
+
+.heading-tertiary {
+    font-size: $font-size-xl;
+    color: $color-red;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+@include respond(tab-port) {
+
+    .heading-tertiary {
+        font-size: $font-size-s*3;
+    }
+
+    .heading-primary {
+        font-size: $font-size-s*3;
+    }
+}
+
+@include respond(tab-land) {
+
+    .paragraph {
+        font-size: $font-size-l;
+
+        &--highlighted {
+            font-size: $font-size-s*4;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .heading-primary {
+        font-size: $font-size-s*4;
+    }
+
+    .heading-tertiary {
+        font-size: $font-size-l*2;
+        margin-bottom: 6rem;
+    }
+}
+
+@include respond(desktop) {
+
+    .heading-primary {
+        font-size: $font-size-m*4;
+        margin: 2rem 0 12vh;
+    }
+}

@@ -7,20 +7,9 @@
         padding: $padding-wrapper-mobile;
     }
 
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
     &__content {
         display: flex;
         flex-direction: column-reverse;
-    }
-
-    .heading-tertiary {
-        font-size: $font-size-xl;
-        color: $color-red;
-        font-weight: 700;
-        margin-bottom: 4rem;
     }
 
     &__list {
@@ -44,10 +33,6 @@
 
         &__wrapper {
             padding: $padding-wrapper-tab-port;
-        }
-
-        .heading-tertiary {
-            font-size: $font-size-s*3;
         }
 
         &__content {
@@ -74,19 +59,13 @@
 
     .about-product {
 
-
         &__slider {
             width: 60%;
         }
 
         &__description {
             max-width: 35%;
-        }
-
-        .heading-tertiary {
-            font-size: $font-size-l*2;
-            margin-bottom: 6rem;
-        }
+        }  
     }
 }
 

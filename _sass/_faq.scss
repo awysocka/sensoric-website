@@ -16,10 +16,6 @@
         }
     }
 
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
     &__list {
         list-style: none;
         max-width: 80rem;
@@ -69,17 +65,9 @@
         transition: all .8s ease-out; 
     }
 
-    &__text {
-        color: $color-dark-grey;
-        font-size: 1.6rem;
-        line-height: 1.6;
-        padding: 2rem;
-    }
-
     &__list-item--active {
         background-color: $color-red;
         
-
         .faq__link {
             color: $color-white;
         }

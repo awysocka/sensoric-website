@@ -26,14 +26,6 @@
         max-width: 350px;
     }
 
-    .heading-primary {
-        font-family: $font-family-primary;
-        font-weight: 700;
-        color: #1a5d59;
-        font-size: $font-size-xl;
-        text-align: center;
-    }
-
     a {
         margin-bottom: -2.5rem;
 
@@ -65,10 +57,6 @@
         &__img {
             max-width: 500px;
         }
-    
-        .heading-primary {
-            font-size: $font-size-s*3;
-        }
     }
 }
 
@@ -83,10 +71,6 @@
             max-width: 650px;
             margin-top: 4rem;
         }
-    
-        .heading-primary {
-            font-size: $font-size-s*4;
-        }
     }
 }
 
@@ -97,11 +81,6 @@
         &__img {
             margin-top: 6rem;
             max-width: 750px;
-        }
-    
-        .heading-primary {
-            font-size: $font-size-m*4;
-            margin: 2rem 0 12vh;
         }
     }
 }
