@@ -3,7 +3,7 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 0 2rem 4rem;
+        padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -23,7 +23,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex: 1 1 300px;
+        flex: 1 1 330px;
     }
 
     &__item:not(:last-child) {
@@ -47,38 +47,31 @@
     }
 }
 
-// MEDIA QUERIES
+//MEDIA QUERIES
 
-// @include respond(tab-port) {
+@include respond(tab-port) {
 
-//     .game-boxes {
+    .game-boxes {
     
-//         &__wrapper {
-//             padding: 0 4rem 8rem;
-//             display: flex;
-//             justify-content: center;
-//         }
-//     }
-// }
+        &__wrapper {
+            padding: $padding-wrapper-tab-port;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
 
-// @include respond(tab-land) {
+@include respond(tab-land) {
 
-//     .game-boxes {
+    .game-boxes {
     
-//         &__wrapper {
-//             display: flex;
-//             justify-content: center;
-//         }
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+        }
 
-//         &__item {
-
-//             p {
-//                 font-size: $font-size-l;
-//             }
-//         }
-
-//         &__item:not(:last-child) {
-//             margin-bottom: 0;
-//         }
-//     }
-// }
+        &__item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}

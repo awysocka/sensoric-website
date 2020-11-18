@@ -3,6 +3,7 @@ const navLogo = document.querySelector("#nav-logo");
 const heroLogo = document.querySelector('#hero-img');
 const nav = document.querySelector('.navigation');
 
+
 function updateNavOnScroll() {
   const navHeight = nav.offsetHeight;
   const heroLogoPosition = heroLogo.getBoundingClientRect();
@@ -49,9 +50,11 @@ const smoothScroll = event => {
   
     const navLogoLink = document.querySelector('#nav-logo-link');
     const arrowLink = document.querySelector('#arrow');
+    const moreButton = document.querySelector('#more-button');
   
     arrowLink.addEventListener('click', smoothScroll);
     navLogoLink.addEventListener('click', smoothScroll);
+    moreButton.addEventListener('click', smoothScroll);
   
     navigationLinks.forEach(navigationLink => {
   
@@ -63,7 +66,7 @@ const smoothScroll = event => {
   
   }
 
-  //carousel
+//carousel
 
 const slides = document.querySelectorAll('.slider__element');
 const sliderDots = document.querySelectorAll('.slider__controles span');

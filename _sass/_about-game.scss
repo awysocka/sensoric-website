@@ -1,10 +1,10 @@
 .about-game {
-    margin-top: 6rem;
+    margin-top: 4rem;
 
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: $padding-wrapper-mobile;
+        padding: 4rem 2rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -16,7 +16,12 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
     }
 
     &__button {
@@ -24,10 +29,8 @@
         font-size: $font-size-l;
     }
 
-
-
     &__img {
-        border-radius: 50%;
+        border-radius: $box-radius;
         width: 100%;
         margin-bottom: 4rem;
         max-width: 400px;
@@ -50,10 +53,10 @@
 @include respond(tab-port) {
 
     .about-game {
-        margin-top: 4;
+        margin-top: 2rem;
     
         &__wrapper {
-            padding: $padding-wrapper-tab-port;
+            padding: 8rem 4rem 0;
         }
     
         &__content {
@@ -65,8 +68,8 @@
         }
 
         &__description {
-            margin-right: 2rem;
-            max-width: 50%;
+            max-width: 45%;
+            align-items: flex-start;
         }
     
         &__img {
@@ -81,6 +84,27 @@
 
         &__content {
             margin-bottom: 10rem;
+        }
+
+        &__description {
+            max-width: 45%;
+            align-items: flex-start;
+        }
+
+        &__img {
+            width: 50%;
+            max-width: 580px;
+        }
+        
+    }
+}
+
+@include respond(desktop) {
+    .about-game {
+
+        &__description {
+            max-width: 45%;
+            align-items: flex-start;
         }
 
         &__img {

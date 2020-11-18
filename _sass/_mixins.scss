@@ -18,14 +18,14 @@
     font-size: $font-size-s*3;
     text-align: center;
     color: $color-red;
-    -webkit-text-stroke-width: 1px;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 @mixin button {
     font-family: $font-family-primary;
     font-size: $font-size-xl;
     color: $color-red;
+    text-align: center;
     padding: 1rem 2rem;
     border: 1px solid $color-red;
     border-radius: $box-radius;
