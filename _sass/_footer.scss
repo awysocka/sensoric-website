@@ -1,5 +1,5 @@
 .footer {
-    background-color: $color-grey;
+    background-color: $color-dark-grey;
 
     &__wrapper {
         max-width: $max-width;
@@ -10,17 +10,20 @@
     &__description {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 2rem;
+        align-items: center;
 
         img {
             width: 25%;
-            margin-bottom: 2rem;
+            margin-bottom: .5rem;
         }
 
         a {
             font-weight: 700; 
             transition: color .3s ease;
+        }
+
+        p {
+            text-align: center;
         }
     }
 
@@ -32,17 +35,14 @@
 
     &__nav {
         color: $color-white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .social-media {
         display: flex;
-        margin-bottom: 2rem;
+        margin-right: 1rem;
 
         &__item {
-            font-size: $font-size-m*2;
+            font-size: $font-size-xl;
         }
 
         &__item:not(:last-child) {
@@ -52,8 +52,9 @@
 
     &__menu {
         display: flex;
-        justify-content: start;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 2rem;
         font-size: $font-size-m;
         line-height: 1.6;
@@ -61,66 +62,67 @@
     }
 
     &__item {
-        margin-right: 2rem;
+        margin: 1rem;
+    }
+
+    &__subcontent {
+        border-top: 1px solid $color-white;
+        padding-top: 1rem;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     &__copyright {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         font-size: $font-size-xs*2;
         line-height: 1.6;
         white-space: nowrap;
-        border-top: 1px solid $color-white;
-        padding-top: 2rem;
-        color: $color-white;
+        
     }
 }
 
 //MEDIA QUERIES
 
 @include respond (tab-port) {
-    
+
     .footer {
+    
         &__wrapper {
-            padding: 4rem 4rem 2rem;
+            padding: 2rem 4rem;
+        }
+    
+        &__description {
+    
+            img {
+                width: 25%;
+                max-width: 70px;
+                margin-bottom: 1rem;
+            }
         }
     
         &__content {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: stretch;
-            margin-bottom: 2rem;
+            align-items: center;
         }
 
-        &__description {
-            align-items: flex-start;
-            margin-bottom: 0;
-            max-width: 350px;
-
-            img {
-                max-width: 150px;
-            }
+        &__item {
+            margin: 0;
         }
-
-        .social-media {
-            margin-bottom: 0;
+    
+        &__item:not(:last-child) {
+            margin: 0 2rem 0 0;
         }
-
-        &__nav {
-            margin-right: 2rem;
+    
+        &__subcontent {
             justify-content: space-between;
         }
-    }
-}
-
-@include respond(tab-land) {
-
-    .footer {
-
-        &__menu {
-            margin-bottom: 0;
+    
+        &__copyright {
+            align-items: flex-end;
         }
     }
 }
