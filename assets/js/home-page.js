@@ -22,9 +22,17 @@ window.addEventListener('deviceorientation', updateNavOnScroll);
 
 const smoothScroll = event => {
     event.preventDefault();
+
     let targetID = event.target.getAttribute('href') || event.currentTarget.getAttribute('href');
-    targetID = targetID.substring(1);
-    const targetPosition = document.querySelector(targetID).offsetTop - 30;
+
+    let targetPosition;
+    if (targetID == "/") {
+      targetPosition = 0;
+    } else {
+      targetID = targetID.substring(1);
+      targetPosition = document.querySelector(targetID).offsetTop - 30;
+    }
+    
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     const duration = 500;
@@ -40,31 +48,31 @@ const smoothScroll = event => {
     };
   
     window.requestAnimationFrame(step);
-  };
+};
   
-  const easeOutQuad = progress => {
-    return -progress * (progress - 2);
-  };
-  
-  if (window.location.pathname === "/") {
-  
-    const navLogoLink = document.querySelector('#nav-logo-link');
-    const arrowLink = document.querySelector('#arrow');
-    const moreButton = document.querySelector('#more-button');
-  
-    arrowLink.addEventListener('click', smoothScroll);
-    navLogoLink.addEventListener('click', smoothScroll);
-    moreButton.addEventListener('click', smoothScroll);
-  
-    navigationLinks.forEach(navigationLink => {
-  
-      if(navigationLink.getAttribute('href').startsWith('/#')) {
-        navigationLink.addEventListener('click', smoothScroll);
-      }
-  
-    });
-  
-  }
+const easeOutQuad = progress => {
+  return -progress * (progress - 2);
+};
+
+if (window.location.pathname === "/") {
+
+  const navLogoLink = document.querySelector('#nav-logo-link');
+  const arrowLink = document.querySelector('#arrow');
+  const moreButton = document.querySelector('#more-button');
+
+  arrowLink.addEventListener('click', smoothScroll);
+  navLogoLink.addEventListener('click', smoothScroll);
+  moreButton.addEventListener('click', smoothScroll);
+
+  navigationLinks.forEach(navigationLink => {
+
+    if(navigationLink.getAttribute('href').startsWith('/#')) {
+      navigationLink.addEventListener('click', smoothScroll);
+    }
+
+  });
+
+}
 
 //carousel
 
