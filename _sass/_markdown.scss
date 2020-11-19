@@ -1,0 +1,222 @@
+.markdown {
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font-family-primary;
+        color: $color-dark-grey;
+    }
+
+    h1:not(:first-child), h2, h3, h4, h5, h6 {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: $font-size-s*3;
+        line-height: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-red;
+        margin-bottom: 4rem;
+    }
+    
+    h2 {
+        font-size: $font-size-xl;
+        margin-bottom: 6rem;
+    }
+
+    h3 {
+        font-size: $font-size-l;
+        line-height: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: $font-size-l;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    h5 {
+        font-size: $font-size-m;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    h6 {
+        font-size: $font-size-m;
+        line-height: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: $font-size-m;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        color: $color-dark-grey;
+    }
+
+    a {
+        color: $color-dark-grey;
+        border-bottom: 1px solid $color-red;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    del {
+        text-decoration: line-through;
+    }
+
+    blockquote p {
+        margin: 0 0 3rem;
+        padding: 0 3rem;
+        border-left: $color-red 3px solid;
+        font-style: italic;
+        font-size: $font-size-l;
+        line-height: 2.5rem;
+
+    }
+
+    ol, ul {
+        color: $color-dark-grey;
+        margin: 1rem 0 1rem 3rem;
+        font-size: $font-size-l;
+    }
+
+    li {
+        margin: .5rem 0;
+    }
+
+    code {
+        padding: .2rem .5rem;
+        font-size: $font-size-m;
+        line-height: 1em;
+        background: rgba($color-red, .2);
+        border-radius: 3px;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        margin: 4vw 0;
+        background: $color-grey;
+        opacity: 0.2;
+    }
+
+    table {
+        display: inline-block;
+        overflow-x: auto;
+        margin: 0.5em 0 2.5em;
+        max-width: 100%;
+        width: auto;
+        border-spacing: 0.25rem;
+        border-collapse: collapse;
+        font-size: $font-size-m;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+
+    th {
+        font-weight: 700;
+        border-bottom: 1px solid $color-red;
+    }
+
+    th, td {
+        text-align: left;
+        padding: .5rem;
+    }
+
+    img, video {
+        width: 100%;
+        display: block;
+        margin: 3rem auto;
+        max-width: 1040px;    
+    }
+}
+
+@include respond(tab-land) {
+
+    .markdown {
+
+        h1 {
+            font-size: 3*$font-size-s;
+            line-height: 3.5rem;
+        }
+        
+        h2 {
+            font-size: $font-size-xl;
+            line-height: 3rem;
+        }
+
+        h3 {
+            font-size: 2*$font-size-s;
+            line-height: 2.5rem;
+        }
+
+        h4 {
+            font-size: 2*$font-size-s;
+            line-height: 2.5rem;
+        }
+
+        h5 {
+            font-size: $font-size-l;
+        }
+
+        h6 {
+            font-size: $font-size-m;
+        }
+
+        p {
+            font-size: 2*$font-size-s;
+            line-height: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        blockquote p {
+            margin: 0 0 4rem;
+            font-size: 2*$font-size-s;
+            line-height: 3rem;
+        }
+
+        ol, ul {
+            font-size: 2*$font-size-s;
+        }
+
+        code {
+            font-size: $font-size-l;
+            line-height: 2.5rem;
+        }
+
+        table {
+            font-size: $font-size-l;
+        }
+
+        th, td {
+            padding: .5rem .7rem;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .markdown {
+
+        a {
+            color: $color-dark-grey;
+
+            &:hover {
+                color: $color-red;
+            }
+
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}

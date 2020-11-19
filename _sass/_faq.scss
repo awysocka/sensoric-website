@@ -63,6 +63,12 @@
         border-bottom-left-radius: $box-radius;
         border-bottom-right-radius: $box-radius;
         transition: all .8s ease-out; 
+
+        p {
+            padding: 2rem;
+            font-size: $font-size-l;
+            margin: 0;
+        }
     }
 
     &__list-item--active {
@@ -84,6 +90,17 @@
             display: block;
         }
     } 
+
+    &__button {
+        font-size: $font-size-s*2;
+        color: $color-red;
+        padding: 1rem 2rem;
+        border-radius: $box-radius;
+        border: 1px solid $color-red;
+        background-color: $color-white;
+        white-space: nowrap;
+        transition: all .3s ease;
+    }
 }
 
 //MEDIA QUERIES
@@ -99,7 +116,7 @@
         }
 
         &__list {
-            margin-bottom: 8rem;
+            margin-bottom: 6rem;
         }
     }
 }
@@ -120,6 +137,11 @@
                 }
         
             }
+        }
+
+        &__button:hover {
+            color: $color-white;
+            background-color: $color-red;
         }
     }
 }
