@@ -136,3 +136,24 @@ sliderDots.forEach( dot => {
 // document.querySelector('.slider').addEventListener('click', () => {
 //     nextSlide();
 // });
+
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoHeight: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    bulletClass: 'circul-nav',
+    bulletActiveClass: 'circul-nav--active',
+    clickable: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+});

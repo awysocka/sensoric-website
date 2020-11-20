@@ -1,101 +1,21 @@
-.testimonials {
 
+.testimonials {
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 4rem 0;
+        padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .heading-secondary {
-        @include heading-secondary;
-    }
-
-    &__list {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        justify-content: center;  
-    }
-
-    &__item {
-        max-width: 320px;
-        background-color: $color-white;
-        padding: 2rem;
-        margin: 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border: 1px solid $color-red;
-        border-radius: 5px;
-        flex: 1 1 250px; 
-    }
-
-    &__photo {
-        max-width: 80px;
-        height: auto;
-        border: 3px solid $color-white;
-        border-radius: 50%;
-        margin-bottom: 2rem;
-        align-self: center;
-        margin-top: -60px;
-    }
-
-    blockquote {
-        @include testimonials-paragraph;
-        line-height: 1.6;
-        margin-top: -10px;
-    }
-
-    span::before {
-        content: ' ,, ';
-        position: relative;
-        font-size: $font-size-xl*2;
-        font-family: $font-family-primary;
-        color: $color-red;
-        line-height: .8;
-    }
-
-    span {
-        transform: rotate(180deg);
-    }
-
-    &__description {
-        margin-bottom: 2rem;
-    }
-
-    &__signature {
-        @include testimonials-paragraph;
-        align-self: flex-end;
-        margin-top: auto;
-        line-height: 1;
+        justify-content: center;
     }
 }
-
-// MEDIA QUERIES
 
 @include respond(tab-port) {
     .testimonials {
 
         &__wrapper {
-            padding: 8rem 2rem;
-        }
-
-        &__item {
-            max-width: 320px;
+            padding: $padding-wrapper-tab-port;
         }
     }
 }
-@include respond(tab-land) {
-    .testimonials {
-    
-        &__item {
-            margin:  4rem 2rem 0;
-        }
-    }
-}
-

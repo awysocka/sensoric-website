@@ -8,8 +8,9 @@
 
 @mixin testimonials-paragraph {
     color: $color-red;
-    font-size: $font-size-m;
+    font-size: $font-size-l;
     font-style: italic;
+    text-align: center;
 }
 
 @mixin heading-secondary {
@@ -30,6 +31,17 @@
     padding: 1rem 2rem;
     border: 1px solid $color-red;
     border-radius: $box-radius;
+    transition: all .3s ease;
+}
+
+@mixin circle-controle-btn {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid $color-red;
+    margin: 0 1rem;
+    transform: scale(1);
     transition: all .3s ease;
 }
 

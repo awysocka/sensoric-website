@@ -1,7 +1,11 @@
 --- 
 layout: default
 title: Strona główna
-additional-script: /assets/js/home-page.js
+additional-scripts: 
+  - https://unpkg.com/swiper/swiper-bundle.min.js
+  - /assets/js/home-page.js
+additional-stylesheet: 
+  - https://unpkg.com/swiper/swiper-bundle.min.css
 permalink: /
 ---
 
@@ -10,7 +14,6 @@ permalink: /
     {% include about-game-section.html %}
     {% include about-game-boxes.html %}
     {% include about-product.html %}
-    <!-- {% include offer.html %} -->
     {% include testimonials.html %}
     {% include about-us-section.html %}
     {% include faq-accordion.html %}

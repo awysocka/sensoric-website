@@ -1,0 +1,21 @@
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for item in site.data.testimonial.items %}
+        <div class="swiper-slide">
+            <div class="testimonials__content">
+                <img src="{{ item.img }}" alt="" class="testimonials__photo">
+                <span class="quote-icon"></span>
+                <blockquote class="testimonials__description">{{ item.text }}</blockquote>
+                <p class="testimonials__signature">{{ item.name}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <i class="fas fa-chevron-circle-right button-next "></i>
+    <i class="fas fa-chevron-circle-left button-prev"></i>
+</div>

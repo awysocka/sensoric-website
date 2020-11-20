@@ -25,15 +25,8 @@
         padding: 2rem 0 0;
 
         span {
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            border: 1px solid $color-red;
-            margin: 0 1rem;
-            transform: scale(1);
-            transition: all .3s ease;
-
+            @include circle-controle-btn;
+           
             &:hover {
                 cursor: pointer;
                 transform: scale(1.1);
