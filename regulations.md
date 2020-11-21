@@ -2,7 +2,7 @@
 layout: page
 title: Regulamin
 markdown: true
-permalink: /regulamin
+permalink: /regulamin/
 ---
 
 **W przygotowaniu**

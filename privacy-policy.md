@@ -2,7 +2,7 @@
 layout: page
 title: Polityka prywatności
 markdown: true
-permalink: /polityka-prywatnosci
+permalink: /polityka-prywatnosci/
 ---
 
 Niniejsza polityka ochrony danych osobowych (dalej Polityka) ma na celu omówienie zasad przetwarzania danych osobowych oraz związanych z tym praw zgodnie z postanowieniami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z 27.04.2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz.Urz. UE L 119, s. 1, zwane dalej RODO) przez Sensoric sp. z o. o. z siedzibą w Warszaiw zwaną dalej Sensoric.
