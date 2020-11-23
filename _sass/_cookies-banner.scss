@@ -1,0 +1,84 @@
+.cookies-banner {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    background-color: $color-white;
+    border-radius: $box-radius;
+    box-shadow: 1px -1px 8px -1px rgba(54,54,54,0.49);
+    z-index: 2;
+    display: none;
+
+    &__content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__description {
+        font-size: $font-size-m;
+        line-height: 1.4;
+        color: $color-dark-grey;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        font-weight: 700;
+        transition: all .3s ease;
+    }
+
+    button {
+        background-color: $color-red;
+        border: 1px solid $color-red;
+        color: $color-white;
+        transition: all .3s ease;
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+//MEDIA QUERIES
+
+@include respond(tab-land) {
+
+    .cookies-banner {
+    
+        &__content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        &__description {
+            text-align: start;
+            margin-bottom: 0;
+            margin-right: 4rem;
+        }
+    
+        a:hover {
+            color: $color-red;
+        } 
+    }
+}
+
+
+@include respond(not-touch-device) {
+
+    .cookies-banner {
+    
+        a:hover {
+            color: $color-red;
+        } 
+
+        button:hover {
+            color: $color-red;
+            background-color: $color-white;
+            cursor: pointer;
+        }
+    }
+}

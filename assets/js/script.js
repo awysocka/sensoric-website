@@ -40,3 +40,18 @@ function addAndRemoveClass(e) {
   
   clickedItem.classList.toggle('faq__list-item--active');
 }
+
+//cookies banner
+
+const cookiesBanner = document.getElementById('cookies-banner');
+const acceptCookiesButton = document.getElementById('accept-cookies-button');
+
+acceptCookiesButton.addEventListener('click', () => {
+  cookiesBanner.classList.remove('cookies-banner--active');
+
+  document.cookie = "cookies_accepted = true";
+});
+
+if (document.cookie.replace(/(?:(?:^|.*;\s*)cookies_accepted\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  cookiesBanner.classList.add('cookies-banner--active');
+}
