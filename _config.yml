@@ -21,7 +21,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-minifier
+  - jekyll-autoprefixer
 
 jekyll-minifier:
   uglifier_args:
     harmony: true
+
+autoprefixer:
+  browsers:
+  - last 2 versions
+  only_production: true
+
+  
