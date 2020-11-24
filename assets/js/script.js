@@ -23,22 +23,24 @@ for (let navigationLink of navigationLinks) {
 
 //accordion
 
+const faqLinks = document.querySelectorAll('.faq__link');
 const faqItems = document.querySelectorAll('.faq__list-item');
 
-faqItems.forEach(item => {
-  item.addEventListener('click', addAndRemoveClass);
+faqLinks.forEach(link => {
+  link.addEventListener('click', addAndRemoveClass);
 });
 
 function addAndRemoveClass(e) {
-  const clickedItem = e.target;
-  
-  if (!clickedItem.classList.contains('faq__list-item--active')) {
+  e.preventDefault();
+  const clickedLink = e.target;
+
+  if (!clickedLink.parentElement.classList.contains('faq__list-item--active')) {
     faqItems.forEach(item => {
       item.classList.remove('faq__list-item--active');
     });
   }
   
-  clickedItem.classList.toggle('faq__list-item--active');
+  clickedLink.parentElement.classList.toggle('faq__list-item--active');
 }
 
 //cookies banner

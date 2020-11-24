@@ -40,15 +40,17 @@
         justify-content: space-between;
         color:$color-dark-grey;
         padding: 2rem;
-        pointer-events: none;
+        // pointer-events: none;
         transition: all .3s ease;
 
         .faq__down-arrow {
             color: $color-red;
+            pointer-events: none;
         }
 
         .faq__up-arrow {
             color: $color-white;
+            pointer-events: none;
         }
 
         .faq__up-arrow {
@@ -73,10 +75,11 @@
     }
 
     &__list-item--active {
-        background-color: $color-red;
         
         .faq__link {
             color: $color-white;
+            background-color: $color-red;
+            border-radius: $box-radius;
         }
 
         .faq__answer {
@@ -126,17 +129,17 @@
 
     .faq {
 
-        &__list-item:hover {
-            cursor: pointer;
-            background-color: $color-dark-red;
+        &__list-item {
 
-            .faq__link {
+            .faq__link:hover {
                 color: $color-white;
+                cursor: pointer;
+                background-color: $color-red;
+                border-radius: $box-radius;
 
                 .faq__down-arrow {
                     color: $color-white;
                 }
-        
             }
         }
 
