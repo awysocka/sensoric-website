@@ -45,7 +45,7 @@ logo-visible-on-start: false
         
         {% include navigation-bar.html %}
 
-        {{ content }}
+        {{ content | add_non_breaking_spaces }}
     
         {% include footer.html %}
 
