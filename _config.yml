@@ -18,4 +18,10 @@ social:
 locale: pl_PL
 
 plugins:
+  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-minifier
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
