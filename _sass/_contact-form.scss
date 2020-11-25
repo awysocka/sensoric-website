@@ -84,6 +84,7 @@
             border: 1px solid $color-red;
             color: $color-white;
             margin-top: 2rem;
+            transition: all .3 ease;
         } 
     }
 
@@ -172,7 +173,7 @@
 
         .redirection-link {
             padding: 1rem 2rem;  
-            background-color: $color-dark-red;
+            background-color: $color-red;
             font-size: $font-size-m; 
             color: $color-white;
             border: 1px solid $color-red;
@@ -188,6 +189,24 @@
 
         &.hidden {
             display: none;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .contact-form {
+
+        &__item {
+
+            button {
+
+                &:hover {
+                    cursor: pointer;
+                    color: $color-red;
+                    background-color: $color-white;
+                }
+            }
         }
     }
 }

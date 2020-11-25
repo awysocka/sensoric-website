@@ -1,5 +1,6 @@
 .hero {
-    background: url(/assets/images/hero_mobile.jpg) no-repeat center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: calc(90vh - 62px);
@@ -22,7 +23,7 @@
     }
 
     &__img {
-        width: 85%;
+        width: 100%;
         max-width: 350px;
     }
 
@@ -33,12 +34,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: $color-red;
             width: 50px;
             height: 50px;
             border-radius: 50%;
             background-color: $color-red;
             box-shadow: 1px 2px 8px -1px rgba(54,54,54,0.49);
-            pointer-events: none;
             
             i {
                 color: $color-white;
@@ -46,6 +47,14 @@
             }
         }
     }
+}
+
+.webp .hero {
+    background-image: url(/assets/images/hero_mobile.webp);
+}
+
+.no-webp .hero {
+    background-image: url(/assets/images/hero_mobile.jpg);
 }
 
 // MEDIA QUERIES
@@ -63,14 +72,19 @@
 @include respond(tab-land) {
 
     .hero {
-        background: url(/assets/images/hero_web.jpg) no-repeat center;
-        background-attachment: fixed;
-        background-size: cover;
     
         &__img {
             max-width: 650px;
             margin-top: 4rem;
         }
+    }
+
+    .webp .hero {
+        background-image: url(/assets/images/hero_web.webp);
+    }
+    
+    .no-webp .hero {
+        background-image: url(/assets/images/hero_web.jpg);
     }
 }
 
@@ -87,31 +101,28 @@
 
 @include respond(not-touch-device) {
 
-    a {
+    .hero {
 
-        .arrow-circle {
-            transition: all .3s ease;
-            
-            &:hover {
-                background-color: $color-dark-red;
+        a {
+            .arrow-circle {
+                transition: all .3s ease;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
-    }
+    } 
 }
 
 @include respond(landscape) {
     
-    .hero {
-        background: url(/assets/images/hero_web_background.jpg) no-repeat center;
-        background-attachment: fixed;
-        background-size: cover;
+    .webp .hero {
+        background-image: url(/assets/images/hero_web_background.webp);
+    }
+    
+    .no-webp .hero {
+        background-image: url(/assets/images/hero_web_background.jpg);
     }
 }
 
-@include respond(portrait) {
-    .hero {
-        background: url(/assets/images/hero_mobile.jpg) no-repeat center;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-}

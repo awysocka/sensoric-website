@@ -57,10 +57,10 @@ const easeOutQuad = progress => {
 if (window.location.pathname === "/") {
 
   const navLogoLink = document.querySelector('#nav-logo-link');
-  const arrowLink = document.querySelector('#arrow');
+  const nextSectionLink = document.querySelector('#next-section');
   const moreButton = document.querySelector('#more-button');
 
-  arrowLink.addEventListener('click', smoothScroll);
+  nextSectionLink.addEventListener('click', smoothScroll);
   navLogoLink.addEventListener('click', smoothScroll);
   moreButton.addEventListener('click', smoothScroll);
 

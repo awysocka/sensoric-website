@@ -1,7 +1,13 @@
 <section class="hero" id="hero">
     <div class="hero__wrapper">
-        <img src="/assets/images/logo_hero.png" class="hero__img" id="hero-img" alt="Logo Sensoric, zdjęcie w tle">
+        <picture class="hero__img" id="hero-img">
+            <source srcset="/assets/images/logo_hero_mobile.webp" type="image/webp" media="(max-width: 650px)">
+            <source srcset="/assets/images/logo_hero_mobile.png" type="image/png" media="(max-width: 650px)">
+            <source srcset="/assets/images/logo_hero.webp" type="image/webp">
+            <source srcset="/assets/images/logo_hero.png" type="image/png">
+            <img src="/assets/images/logo_hero.png" alt="Logo Sensoric, zdjęcie w tle">
+        </picture>
         <h1 class="heading-primary">Ćwicz i baw się z nami!</h1>
     </div>
-    <a href="/#poznaj-gre" id="arrow"><span class="arrow-circle"><i class="fas fa-arrow-down"></i></span></a>
+    <a href="/#poznaj-gre" id="next-section"><span class="arrow-circle"><i class="fas fa-arrow-down"></i></span></a>
 </section>
