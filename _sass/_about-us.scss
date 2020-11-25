@@ -14,19 +14,18 @@
     &__list {
        width: 100%;
        display: flex;
-       flex-wrap: wrap;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
     }
 
     &__item {
         display: flex;
         flex-direction: column;
-        padding: 0 2rem;
-        flex: 1 1 250px;
         justify-content: start;
         text-align: center;
         align-items: center;
-        margin-bottom: 4rem;
-
+        
         img {
             margin: 0 auto 2rem;
             max-width: 150px;
@@ -35,6 +34,10 @@
             border-radius: 50%;
         }
     }
+
+    &__item:not(:last-child) {
+        margin-bottom: 4rem;
+    }
 }
 
 // MEDIA QUERIES 
@@ -42,39 +45,72 @@
 @include respond(tab-port) {
 
     .about-us {
-        background: url(/assets/images/tree_1.png) $color-super-light-grey no-repeat left top;
+        background-image: url(/assets/images/tree_1.png) ;
+        background-color: $color-super-light-grey;
+        background-position: right top;
+        background-repeat: no-repeat;
         background-size: 48%;
 
         &__wrapper {
             padding: $padding-wrapper-tab-port;
         }
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: flex-start;
+
+            picture {
+               margin-right: 2rem; 
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                max-width: 500px;
+                text-align: start;
+            }
+        }
+
     }
 }
 
 @include respond(tab-land) {
 
     .about-us {
-        background: url(/assets/images/tree_1.png) $color-super-light-grey no-repeat left top;
         background-size: 46%;
+
+        &__item {
+
+            picture {
+                margin-right: 4rem;
+            }
+        }
+
+        &__content {
+
+            p {
+                max-width: 700px;
+            }
+        }
     }
 }
 
 @include respond(desktop) {
 
     .about-us {
-        background: url(/assets/images/tree_1.png) $color-super-light-grey no-repeat left top;
         background-size: 45%;
-
-        &__item {
-            margin-bottom: 0;
-        }
     }
 }
 
 @include respond(big-screen) {
 
     .about-us {
-        background: url(/assets/images/tree_1.png) $color-super-light-grey no-repeat left top;
         background-size: 35%;
     }
 }
