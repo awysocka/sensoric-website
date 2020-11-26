@@ -1,0 +1,16 @@
+--- 
+layout: page
+title: Dziękujemy za zainteresowanie naszą historią!
+permalink: /zaloguj/
+---
+
+<div class="login__wrapper">
+    <p>Już niedługo ruszamy ze sprzedażą pudełek.<span>Obserwuj nasze media społecznościowe, aby nie umknął Ci żaden szczegół!</span></p>
+    <ul class="social-media">
+        {% for item in site.data.social-media-link.items limit:2 %}
+        <li class="social-media__item">
+            <a href="{{ item.link }}" class="social-media__link" target="_blank" rel="noopener" aria-label="{{item.label}}"><i class="{{ item.icon }}"></i></a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>

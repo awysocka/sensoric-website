@@ -1,0 +1,46 @@
+.login {
+
+    &__wrapper {
+        text-align: center;
+
+        p {
+            font-size: $font-size-l;
+            line-height: 1.6;
+            color: $color-dark-grey;
+        }
+
+        span {
+            display: block;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-size-l*2;
+
+            &__item {
+                margin: 4rem 2rem;
+                color: $color-red;
+                transition: all .3s ease;
+                border-bottom: 1px solid $color-white;
+            }
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .login {
+
+        &__wrapper {
+
+            .social-media {
+    
+                &__item:hover {
+                    border-bottom: 1px solid $color-red;
+                }
+            }
+        }
+    }
+}
