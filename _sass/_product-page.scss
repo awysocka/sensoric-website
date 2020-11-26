@@ -1,0 +1,123 @@
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__video {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .play-button {
+            background-color: $color-white;
+            border-radius: 50%;
+            border: 2px solid $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            box-shadow: 1px -1px 8px -1px rgba(54,54,54,0.49);
+
+            i {
+                font-size: $font-size-xl*3;
+                color: $color-red;
+                font-weight: 700;
+                pointer-events: none;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .heading-quaternary {
+        font-size: $font-size-xl*2;
+        line-height: .7;
+        margin-bottom: 2rem;
+    }
+
+    .price {
+        font-size: $font-size-l*2;
+        margin-bottom: 0;
+
+        span {
+            font-size: $font-size-xl;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 2rem 0;
+    }
+
+    &__description {
+        text-align: justify;
+    }
+
+    .price-description {
+        font-size: $font-size-m;
+        line-height: 1.2;
+    }
+
+    .button {
+        @include button;
+        color: $color-white;
+        background-color: $color-red;
+        margin-top: 2rem;
+    }
+}
+
+@include respond(tab-port) {
+
+    .product {
+        &__content {
+            align-items: flex-start;
+        }
+    }
+}
+
+@include respond(tab-land) {
+
+    .product {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &__video {
+            width: 47%;
+        }
+
+        .heading-quaternary {
+            margin-bottom: 4rem;
+        }
+
+        &__content {
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .product {
+        .button:hover {
+            color: $color-red;
+            background-color: $color-white;
+        }
+
+        &__video {
+
+             .play-button:hover {
+                transform: translateY(-50%) translateX(-50%) scale(1.05);
+            }
+        }
+    }
+}
+
+

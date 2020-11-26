@@ -57,3 +57,8 @@ acceptCookiesButton.addEventListener('click', () => {
 if (document.cookie.replace(/(?:(?:^|.*;\s*)cookies_accepted\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
   cookiesBanner.classList.add('cookies-banner--active');
 }
+
+
+if (document.querySelector('.mediabox')) {
+  MediaBox('.mediabox');
+}

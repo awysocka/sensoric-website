@@ -4,7 +4,9 @@ logo-visible-on-start: true
 ---
 <div class="page">
     <div class="page__wrapper">
-        <h1 class="heading-primary">{{page.title}}</h1>
+        {% if page.display-title != false %}
+            <h1 class="heading-primary">{{page.title}}</h1>
+        {% endif %}
         <main class="{% if page.markdown %} markdown {% endif %}">
             {{ content }}
         </main> 
