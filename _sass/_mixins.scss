@@ -7,19 +7,10 @@
 }
 
 @mixin testimonials-paragraph {
-    color: $color-red;
+    color: $color-dark-grey;
     font-size: $font-size-l;
     font-style: italic;
     text-align: center;
-}
-
-@mixin heading-secondary {
-    margin: 0;
-    font-family: $font-family-primary;
-    font-size: $font-size-s*3;
-    text-align: center;
-    color: $color-red;
-    margin-bottom: 4rem;
 }
 
 @mixin button {

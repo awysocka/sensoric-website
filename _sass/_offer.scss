@@ -10,10 +10,6 @@
         align-items: center; 
     }
 
-    h2 {
-        @include heading-secondary;
-    }
-
     &__container {
         width: 100%;
         display: flex;
