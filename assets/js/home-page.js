@@ -77,7 +77,7 @@ if (window.location.pathname === "/") {
 //carousel
 
 const slides = document.querySelectorAll('.slider__element');
-const sliderDots = document.querySelectorAll('.slider__controles span');
+const sliderDots = document.querySelectorAll('.slider__controls span');
 let index = 0;
 
 function nextSlide() {

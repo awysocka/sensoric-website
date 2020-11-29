@@ -72,7 +72,7 @@ messageInput.addEventListener('input', messageInputValidation );
 agreementCheckbox.addEventListener('input', agreementInputValidation );
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(e);
+  e.preventDefault();
 
   if (nameInputValidation() 
       && mailInputValidation() 
@@ -97,7 +97,7 @@ form.addEventListener('submit', (e) => {
   
     fetch('mail.php', options)
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           form.classList.add('hidden');
           successfulSubmitMessage.classList.remove('hidden');
           contactFormTitle.textContent = 'Potwierdzenie wysłania formularza';
