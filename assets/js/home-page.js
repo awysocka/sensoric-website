@@ -26,7 +26,7 @@ const smoothScroll = event => {
     let targetID = event.target.getAttribute('href') || event.currentTarget.getAttribute('href');
 
     let targetPosition;
-    if (targetID == "/") {
+    if (targetID === "/") {
       targetPosition = 0;
     } else {
       targetID = targetID.substring(1);

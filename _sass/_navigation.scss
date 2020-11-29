@@ -82,6 +82,12 @@
         @include button;
         text-transform: uppercase;
         font-size: $font-size-l;
+
+        &--no-border {
+            border: none;
+            color: $color-dark-grey;
+            margin-bottom: 2rem;
+        }
     }
 }
 
@@ -142,7 +148,19 @@
         }
     
         &__button {
-            font-size: $font-size-m;
+            font-size: 1.4rem;
+            margin-left: auto;
+
+            &--no-border {
+                margin-bottom: 0;
+            }
+
+            &--highlighted {
+                margin-left: 1rem;
+                background-color: $color-red;
+                color: $color-white;
+                font-weight: 500;
+            }
         }
     }
 }
@@ -159,12 +177,13 @@
             }
         }
 
-        &__button {
+        &__button--no-border:hover {
+            color: $color-red;
+        }
 
-            &:hover {
-                color: $color-white;
-                background-color: $color-red;
-            }
+        &__button--highlighted:hover {
+            background-color: $color-white;
+            color: $color-red;
         }
     }
 }
