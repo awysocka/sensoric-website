@@ -9,6 +9,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
+        border-radius: $box-radius;
 
         .play-button {
             background-color: $color-white;
@@ -33,7 +34,7 @@
         width: 100%;
     }
 
-    .heading-quaternary {
+    .heading-tertiary {
         font-size: $font-size-xl*2;
         line-height: .7;
         margin-bottom: 2rem;
@@ -92,7 +93,7 @@
             width: 47%;
         }
 
-        .heading-quaternary {
+        .heading-tertiary {
             margin-bottom: 4rem;
         }
 
@@ -106,14 +107,14 @@
 @include respond(not-touch-device) {
 
     .product {
-        .button:hover {
+        .button:hover, .button:focus {
             color: $color-red;
             background-color: $color-white;
         }
 
         &__video {
 
-             .play-button:hover {
+             .play-button:hover, .play-button:focus {
                 transform: translateY(-50%) translateX(-50%) scale(1.05);
             }
         }

@@ -125,7 +125,7 @@
 
         &__list-item {
 
-            .faq__link:hover {
+            .faq__link:hover, .faq__link:focus {
                 color: $color-white;
                 cursor: pointer;
                 background-color: $color-red;
@@ -137,7 +137,7 @@
             }
         }
 
-        &__button:hover {
+        &__button:hover, .faq__button:focus {
             color: $color-white;
             background-color: $color-red;
         }

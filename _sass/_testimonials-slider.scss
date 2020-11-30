@@ -58,10 +58,6 @@
         cursor: pointer;
         display: none;
         transition: all .3 ease;
-
-        &:hover {
-            color: $color-red;
-        }
     }
 
     .button-prev {
@@ -75,10 +71,6 @@
         cursor: pointer;
         display: none;
         transition: all .3 ease;
-        
-        &:hover {
-            color: $color-red;
-        }
     }
     
     .circul-nav {
@@ -88,11 +80,6 @@
 
         &--active {
             background-color: $color-red;
-        }
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
         }
     }
     
@@ -130,6 +117,26 @@
 
         &__content {
             min-height: 380px;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .testimonials {
+        .button-next:hover, .button-next:focus {
+            color: $color-red;
+        }
+
+        .button-prev:hover, .button-prev:focus {
+
+            color: $color-red;
+        }
+
+        .circul-nav:hover {
+
+            cursor: pointer;
+            transform: scale(1.1);
         }
     }
 }

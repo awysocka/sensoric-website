@@ -58,10 +58,6 @@
             text-align: start;
             margin-bottom: 0;
             margin-right: 4rem;
-        }
-    
-        a:hover {
-            color: $color-red;
         } 
     }
 }
@@ -71,11 +67,11 @@
 
     .cookies-banner {
     
-        a:hover {
+        a:hover, a:focus {
             color: $color-red;
         } 
 
-        button:hover {
+        button:hover, button:focus {
             color: $color-red;
             background-color: $color-white;
             cursor: pointer;

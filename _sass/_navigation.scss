@@ -76,6 +76,7 @@
         color: $color-dark-grey;
         white-space: nowrap;
         text-transform: uppercase;
+        transition: color .3s ease;
     }
 
     &__button {
@@ -169,19 +170,16 @@
 
     .navigation {
 
-        &__link {
-            transition: color .3s ease;
+        &__link:hover, .navigation__link:focus {
 
-            &:hover {
-                color: $color-red;
-            }
-        }
-
-        &__button--no-border:hover {
             color: $color-red;
         }
 
-        &__button--highlighted:hover {
+        &__button--no-border:hover, .navigation__button--no-border:focus {
+            color: $color-red;
+        }
+
+        &__button--highlighted:hover, .navigation__button--highlighted:focus {
             background-color: $color-white;
             color: $color-red;
         }

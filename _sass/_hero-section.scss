@@ -40,6 +40,7 @@
             border-radius: 50%;
             background-color: $color-red;
             box-shadow: 1px 2px 8px -1px rgba(54,54,54,0.49);
+            transition: all .3s ease;
             
             i {
                 color: $color-white;
@@ -104,12 +105,8 @@
     .hero {
 
         a {
-            .arrow-circle {
-                transition: all .3s ease;
-                
-                &:hover {
-                    transform: scale(1.1);
-                }
+            .arrow-circle:hover, .arrow-circle:focus {
+                transform: scale(1.1);
             }
         }
     } 

@@ -180,10 +180,9 @@
             border-radius: $box-radius;
             transition: all .3s ease;
 
-            &:hover {
+            &:hover, .redirection-link:focus {
                 background-color: $color-white;
                 color: $color-red;
-            
             }
         }
 
@@ -199,13 +198,10 @@
 
         &__item {
 
-            button {
-
-                &:hover {
-                    cursor: pointer;
-                    color: $color-red;
-                    background-color: $color-white;
-                }
+            button:hover, button:focus {
+                cursor: pointer;
+                color: $color-red;
+                background-color: $color-white;
             }
         }
     }

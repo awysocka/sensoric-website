@@ -47,6 +47,7 @@
             width: 100%;
             text-align: center;
             border-radius: $box-radius;
+            outline: none;
         }
 
         .play-button {
@@ -137,17 +138,15 @@
 @include respond(not-touch-device) {
 
     .about-game {
-        &__button {
+        &__button:hover, .about-game__button:focus {
 
-            &:hover {
-                color: $color-white;
-                background-color: $color-red;
-            }
+            color: $color-white;
+            background-color: $color-red;
         }
 
         &__video {
 
-            .play-button:hover {
+            .play-button:hover, .play-button:focus {
                transform: translateY(-50%) translateX(-50%) scale(1.05);
                cursor: pointer;
            }

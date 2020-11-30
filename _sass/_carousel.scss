@@ -27,7 +27,7 @@
         span {
             @include circle-controle-btn;
            
-            &:hover {
+            &:hover, span:focus {
                 cursor: pointer;
                 transform: scale(1.1);
             }

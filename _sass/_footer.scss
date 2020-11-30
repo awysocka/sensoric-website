@@ -129,7 +129,7 @@
 
     .footer {
 
-        a:hover {
+        a:hover, a:focus {
             border-bottom: 1px solid $color-white;
         }
     }

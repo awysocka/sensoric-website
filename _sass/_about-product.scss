@@ -106,12 +106,10 @@
 @include respond(not-touch-device) {
 
     .about-product {
-        &__button {
+        &__button:hover, .about-product__button:focus {
 
-            &:hover {
-                color: $color-white;
-                background-color: $color-red;
-            }
+            color: $color-white;
+            background-color: $color-red;
         }
     }
 }

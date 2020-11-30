@@ -209,14 +209,11 @@
 
         a {
             color: $color-dark-grey;
+        }
 
-            &:hover {
-                color: $color-red;
-            }
-
-            &:focus {
-                background-color: transparent;
-            }
+        a:hover, a:focus {
+            color: $color-red;
+            background-color: transparent;
         }
     }
 }

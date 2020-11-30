@@ -26,6 +26,7 @@ plugins:
 jekyll-minifier:
   uglifier_args:
     harmony: true
+    preserve_php: true
 
 autoprefixer:
   browsers:

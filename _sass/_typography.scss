@@ -75,19 +75,25 @@
 }
 
 .heading-tertiary {
-    font-size: $font-size-xl;
-    color: $color-red;
-    font-weight: 700;
-    margin-bottom: 4rem;
-}
 
-.heading-quaternary {
     font-size: $font-size-s*2;
     color: $color-red;
     text-align: center;
     font-weight: 700;
     margin-bottom: 1rem;
+    // font-size: $font-size-xl;
+    // color: $color-red;
+    // font-weight: 700;
+    // margin-bottom: 4rem;
 }
+
+// .heading-quaternary {
+//     font-size: $font-size-s*2;
+//     color: $color-red;
+//     text-align: center;
+//     font-weight: 700;
+//     margin-bottom: 1rem;
+// }
 
 @include respond(tab-port) {
 
@@ -96,12 +102,13 @@
     }
 
     .heading-tertiary {
-        font-size: $font-size-s*3;
+        font-size: $font-size-xl;
+        // font-size: $font-size-s*3;
     }
 
-    .heading-quaternary {
-        font-size: $font-size-xl;
-    }
+    // .heading-quaternary {
+    //     font-size: $font-size-xl;
+    // }
 
     .paragraph--strong {
         max-width: 90%;
@@ -141,10 +148,10 @@
         margin-bottom: 6rem;
     }
 
-    .heading-tertiary {
-        font-size: $font-size-l*2;
-        margin-bottom: 6rem;
-    }
+    // .heading-tertiary {
+    //     font-size: $font-size-l*2;
+    //     margin-bottom: 6rem;
+    // }
 }
 
 @include respond(desktop) {
