@@ -47,6 +47,11 @@
             }
         }
     }
+
+    &__button {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
 }
 
 .webp .hero {
@@ -79,6 +84,10 @@
         &__img {
             max-width: 650px;
             margin-top: 4rem;
+        }
+
+        &__button {
+            display: none;
         }
     }
 
@@ -122,6 +131,20 @@
     
     .no-webp .hero {
         background-image: url(/assets/images/hero_web_background.jpg);
+    }
+
+    .hero__img {
+        width: 70%;
+        margin-top: -2rem;
+    }
+
+    .heading-primary {
+        font-size: $font-size-l;
+    }
+
+    .hero__button {
+        font-size: $font-size-xs*2;
+        margin-top: 0;
     }
 }
 
