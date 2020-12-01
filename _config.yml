@@ -3,17 +3,18 @@ tagline: "Sensoric to fabularna gra online do integracji sensorycznej dzieci w w
 description: "Sensoric łączy zabawę z ćwiczeniami integracji sensorycznej wspomagając prawidłowy rozwój Twojego dziecka. Gra przeznaczona dla dzieci  w wieku 4 - 7 lat."
 url: https://sensoric.eu
 author: Sensoric
-image: /assets/images/img_og.png
-height: "631"
-width: "1080"
 facebook:
-  publisher: https://www.facebook.com/Sensoric.gra/
+  publisher: www.facebook.com/Sensoric.gra/
   admins: Sensoric.gra
+logo: /assets/images/logo_hero.png
 social:
   name: Sensoric
   links: 
     - https://www.facebook.com/Sensoric.gra/
     - https://www.instagram.com/sensoric.eu/
+image: /assets/images/img_og.png
+#height: "631"
+#width: "1080"
 #google_site_verification
 locale: pl_PL
 
@@ -33,4 +34,5 @@ autoprefixer:
   - last 2 versions
   only_production: true
 
-  
+exclude:
+  - build.sh

@@ -89,6 +89,12 @@
             color: $color-dark-grey;
             margin-bottom: 2rem;
         }
+
+        &--highlighted {
+            background-color: $color-red;
+            color: $color-white;
+            font-weight: 500;
+        }
     }
 }
 
@@ -158,9 +164,6 @@
 
             &--highlighted {
                 margin-left: 1rem;
-                background-color: $color-red;
-                color: $color-white;
-                font-weight: 500;
             }
         }
     }

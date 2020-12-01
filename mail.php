@@ -13,10 +13,10 @@ error_reporting(E_ALL & ~E_NOTICE);
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Formularz kontaktowy <wysocka.anna88@gmail.com>';
+$from = 'Formularz kontaktowy <kontakt@sensoric.eu>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Anna Wysocka <wysocka.anna88@gmail.com>';
+$sendTo = 'Sensoric <kontakt@sensoric.eu>';
 
 // subject of the email
 $subjectPrefix = 'Nowa wiadomość od ';
