@@ -15,14 +15,6 @@
     margin-bottom: 2rem;
 }
 
-// .paragraph--highlighted-small {
-//     font-size: $font-size-l;
-//     color: $color-red;
-//     text-align: center;
-//     font-weight: 700;
-//     margin-bottom: 1rem;
-// }
-
 .paragraph--white {
     color: $color-white;
 }
@@ -54,7 +46,7 @@
 .heading-primary {
     font-family: $font-family-primary;
     font-weight: 700;
-    color: #1a5d59;
+    color: $color-red;
     font-size: $font-size-xl;
     text-align: center;
 }
@@ -81,41 +73,21 @@
     text-align: center;
     font-weight: 700;
     margin-bottom: 1rem;
-    // font-size: $font-size-xl;
-    // color: $color-red;
-    // font-weight: 700;
-    // margin-bottom: 4rem;
 }
-
-// .heading-quaternary {
-//     font-size: $font-size-s*2;
-//     color: $color-red;
-//     text-align: center;
-//     font-weight: 700;
-//     margin-bottom: 1rem;
-// }
 
 @include respond(tab-port) {
 
     .heading-primary {
         font-size: $font-size-s*4;
+        margin-top: .5rem;
     }
 
     .heading-tertiary {
         font-size: $font-size-xl;
-        // font-size: $font-size-s*3;
     }
-
-    // .heading-quaternary {
-    //     font-size: $font-size-xl;
-    // }
 
     .paragraph--strong {
         max-width: 90%;
-    }
-
-    .paragraph--highlighted-small {
-        font-size: $font-size-s*2;
     }
 }
 
@@ -129,10 +101,6 @@
         font-size: $font-size-s*4;
         margin-bottom: 4rem;
     }
-
-    .paragraph--highlighted-small {
-        font-size: $font-size-s*2;
-    }
     
     .paragraph--strong {
         margin-bottom: 8rem;
@@ -140,24 +108,18 @@
     }
     
     .heading-primary {
-        font-size: $font-size-s*4;
+        font-size: $font-size-s*5;
     }
 
     .heading-secondary {
         font-size: $font-size-l*3;
         margin-bottom: 6rem;
     }
-
-    // .heading-tertiary {
-    //     font-size: $font-size-l*2;
-    //     margin-bottom: 6rem;
-    // }
 }
 
 @include respond(desktop) {
 
     .heading-primary {
-        font-size: $font-size-m*4;
-        margin: 2rem 0 12vh;
+        font-size: $font-size-m*3;
     }
 }

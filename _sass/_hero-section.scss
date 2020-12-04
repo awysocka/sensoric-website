@@ -22,8 +22,9 @@
     }
 
     &__img {
-        width: 100%;
+        width: 90%;
         max-width: 350px;
+        margin-top: 8rem;
     }
 
     a {
@@ -55,11 +56,11 @@
 }
 
 .webp .hero {
-    background-image: url(/assets/images/hero_mobile.webp);
+    background-image: url(/assets/images/heromobile.webp);
 }
 
 .no-webp .hero {
-    background-image: url(/assets/images/hero_mobile.jpg);
+    background-image: url(/assets/images/heromobile.png);
 }
 
 
@@ -71,8 +72,18 @@
     .hero {
         
         &__img {
+            width: 100%;
             max-width: 500px;
+            margin-top: 0rem;
         }
+    }
+
+    .webp .hero {
+        background-image: url(/assets/images/hero_desktop_2.webp);
+    }
+    
+    .no-webp .hero {
+        background-image: url(/assets/images/hero_desktop_2.jpg);
     }
 }
 
@@ -82,21 +93,13 @@
         background-attachment: fixed;
     
         &__img {
-            max-width: 650px;
+            max-width: 750px;
             margin-top: 4rem;
         }
 
         &__button {
             display: none;
         }
-    }
-
-    .webp .hero {
-        background-image: url(/assets/images/hero_web.webp);
-    }
-    
-    .no-webp .hero {
-        background-image: url(/assets/images/hero_web.jpg);
     }
 }
 
@@ -105,11 +108,12 @@
     .hero {
     
         &__img {
-            margin-top: 6rem;
-            max-width: 750px;
+            max-width: 850px;
+            margin-top: 8rem;
         }
     }
 }
+
 
 @include respond(not-touch-device) {
 
@@ -126,11 +130,11 @@
 @include respond(landscape) {
     
     .webp .hero {
-        background-image: url(/assets/images/hero_web_background.webp);
+        background-image: url(/assets/images/hero_desktop_2.webp);
     }
     
     .no-webp .hero {
-        background-image: url(/assets/images/hero_web_background.jpg);
+        background-image: url(/assets/images/hero_desktop_2.jpg);
     }
 
     .hero__img {
