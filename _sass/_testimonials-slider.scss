@@ -33,10 +33,10 @@
     .quote-icon::before {
         content: ' ,, ';
         position: relative;
-        font-size: $font-size-xl*2;
+        font-size: $font-size-xl*4;
         font-family: $font-family-primary;
         color: $color-red;
-        line-height: .8;
+        line-height: .3;
         
     }
     

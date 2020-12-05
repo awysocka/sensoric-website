@@ -4,7 +4,7 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 4rem 2rem 0;
+        padding: $padding-wrapper-mobile;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -78,7 +78,7 @@
         margin-top: 2rem;
     
         &__wrapper {
-            padding: 8rem 4rem 0;
+            padding: $padding-wrapper-tab-port;
         }
     
         &__content {
@@ -117,7 +117,6 @@
             width: 50%;
             max-width: 580px;
         }
-        
     }
 }
 

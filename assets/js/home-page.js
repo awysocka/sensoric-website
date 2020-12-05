@@ -58,11 +58,11 @@ if (window.location.pathname === "/") {
 
   const navLogoLink = document.querySelector('#nav-logo-link');
   const nextSectionLink = document.querySelector('#next-section');
-  const moreButton = document.querySelector('#more-button');
+  // const moreButton = document.querySelector('#more-button');
 
   nextSectionLink.addEventListener('click', smoothScroll);
   navLogoLink.addEventListener('click', smoothScroll);
-  moreButton.addEventListener('click', smoothScroll);
+  // moreButton.addEventListener('click', smoothScroll);
 
   navigationLinks.forEach(navigationLink => {
 

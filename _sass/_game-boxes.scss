@@ -3,11 +3,19 @@
     &__wrapper {
         max-width: $max-width;
         margin: 0 auto;
-        padding: $padding-wrapper-mobile;
+        padding: 0 2rem 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .paragraph {
+        text-align: center;
+    }
+
+    span:first-child {
+        margin-top: 2rem;
     }
 
     &__list {
@@ -47,6 +55,32 @@
     }
 }
 
+.divider {
+    background-color: $color-light-grey;
+    padding: 6rem;
+
+    &__signature {
+        display: block;
+        font-size: $font-size-m;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    &__paragraph {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-dark-grey;
+        font-style: italic;
+        font-size: $font-size-s*2;
+        line-height: 1.8;
+    
+        span:first-child {
+            margin-top: 2rem;
+        }
+    }
+}
+
 //MEDIA QUERIES
 
 @include respond(tab-port) {
@@ -54,7 +88,7 @@
     .game-boxes {
     
         &__wrapper {
-            padding: $padding-wrapper-tab-port;
+            padding: 0 4rem 8rem;;
             display: flex;
             justify-content: center;
         }

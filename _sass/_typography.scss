@@ -85,10 +85,6 @@
     .heading-tertiary {
         font-size: $font-size-xl;
     }
-
-    .paragraph--strong {
-        max-width: 90%;
-    }
 }
 
 @include respond(tab-land) {

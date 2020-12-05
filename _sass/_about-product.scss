@@ -11,10 +11,15 @@
         align-items: center;
     }
 
+    .heading-tertiary {
+        text-align: start;
+        font-size: $font-size-xl;
+        margin-bottom: 2rem;
+    }
+
     &__content {
         display: flex;
         flex-direction: column-reverse;
-        align-items: flex-start;
     }
 
     &__description {
@@ -23,21 +28,26 @@
         flex-direction: column;
     }
 
-    &__list {
-        list-style: inside ;
-        margin-bottom: 4rem;
-    }
-
-    &__item {
-        color: $color-dark-grey;
-        font-size: $font-size-m;
-        line-height: 1.6;
-        text-align: start;
-    }
-
     &__button {
         @include button;
         font-size: $font-size-l;
+        color: $color-white;
+        background-color: $color-red;
+        margin-top: 4rem;
+    }
+
+    .paragraph {
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: baseline;
+
+        i {
+            margin-right: 1.6rem;
+            color: $color-red;
+        }
     }
 }
 
@@ -54,6 +64,7 @@
         &__content {
             flex-direction: row;
             justify-content: space-between;
+            align-items: flex-start;
         }
 
         &__description {
@@ -108,8 +119,8 @@
     .about-product {
         &__button:hover, .about-product__button:focus {
 
-            color: $color-white;
-            background-color: $color-red;
+            color: $color-red;
+            background-color: transparent;
         }
     }
 }
