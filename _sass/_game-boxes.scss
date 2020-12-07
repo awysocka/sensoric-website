@@ -57,7 +57,7 @@
 
 .divider {
     background-color: $color-light-grey;
-    padding: 6rem;
+    padding: 6rem 2rem;
 
     &__signature {
         display: block;
@@ -93,6 +93,10 @@
             justify-content: center;
         }
     }
+
+    .divider {
+        padding: 6rem 4rem;
+    }
 }
 
 @include respond(tab-land) {
@@ -107,5 +111,9 @@
         &__item:not(:last-child) {
             margin-bottom: 0;
         }
+    }
+
+    .divider {
+        padding: 8rem 4rem;
     }
 }

@@ -58,13 +58,13 @@
     }
 
     &__answer {
-        max-height: 0;
+        height: 0;
         overflow: hidden;
         position: relative;
         background-color: $color-white;
         border-bottom-left-radius: $box-radius;
         border-bottom-right-radius: $box-radius;
-        transition: all .8s ease-out; 
+        transition: height .8s ease-out; 
 
         p {
             padding: 2rem;
@@ -82,7 +82,7 @@
         }
 
         .faq__answer {
-            max-height: 40rem;
+            height: auto;
         }
 
         .faq__link .faq__down-arrow {

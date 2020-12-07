@@ -22,6 +22,16 @@
         flex-direction: column-reverse;
     }
 
+    .price {
+        font-size: $font-size-l*2;
+        margin-bottom: 0;
+        color: $color-red;
+
+        span {
+            font-size: $font-size-xl;
+        }
+    }
+
     &__description {
         margin-bottom: 4rem;
         display: flex;
@@ -33,7 +43,6 @@
         font-size: $font-size-l;
         color: $color-white;
         background-color: $color-red;
-        margin-top: 4rem;
     }
 
     .paragraph {
