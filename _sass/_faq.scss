@@ -64,12 +64,14 @@
         background-color: $color-white;
         border-bottom-left-radius: $box-radius;
         border-bottom-right-radius: $box-radius;
-        transition: height .8s ease-out; 
+        transition: all .3s ease-out; 
 
         p {
             padding: 2rem;
             font-size: $font-size-l;
             margin: 0;
+            transform: translateY(-50%);
+            transition: all .3s ease-out; 
         }
     }
 
@@ -83,6 +85,10 @@
 
         .faq__answer {
             height: auto;
+
+            p {
+                transform: translateY(0);
+            }
         }
 
         .faq__link .faq__down-arrow {
