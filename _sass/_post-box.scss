@@ -1,0 +1,57 @@
+.post {
+    display: flex;
+    overflow: hidden;
+    min-height: 300px;
+    max-width: 300px;
+    border: 1px solid $color-red;
+    border-radius: $box-radius;
+    flex: 1 1 250px;
+    margin: 2rem 1rem;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__img {
+        max-height: 150px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: $font-size-s*2;
+        color: $color-red;
+        line-height: 1.2;
+        margin: 2rem;
+        text-align: left;
+    }
+
+    &__reading-time {
+        font-size: $font-size-m;
+        text-align: end;
+        margin: 2rem;
+        color: $color-grey;
+        margin-top: auto;
+    }
+}
+
+@include respond(tab-land) {
+
+    .post {
+
+        h2 {
+            font-size: $font-size-xl;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+
+// @include respond(not-touch-device) {
+
+// }

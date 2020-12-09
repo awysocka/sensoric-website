@@ -42,14 +42,12 @@ logo-visible-on-start: false
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vendors/normalize.css"/>
-    <link href="/assets/vendors/mediabox-master/dist/mediabox.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {% if page.additional-scripts %}
+    {% if page.additional-stylesheets %}
         {% for stylesheet in page.additional-stylesheets %}
             <link rel="stylesheet" href="{{ stylesheet }}">
         {% endfor %}
     {% endif %}
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     {% seo %}
     
     <!-- Facebook Pixel Code -->
@@ -82,7 +80,7 @@ logo-visible-on-start: false
     </div>
     {% include cookies-banner.html %}
 
-    <script src="/assets/vendors/mediabox-master/dist/mediabox.js"></script>
+    <!-- <script src="/assets/vendors/mediabox-master/dist/mediabox.js"></script> -->
     <script src="/assets/js/script.js"></script>
     {% if page.additional-scripts %}
         {% for script in page.additional-scripts %}

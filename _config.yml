@@ -36,3 +36,11 @@ autoprefixer:
 
 exclude:
   - build.sh
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

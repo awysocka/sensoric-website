@@ -1,0 +1,13 @@
+<article class="post">
+    <a href="{{ post.url}}" class="post__link">
+        <div class="post__img">
+            <img src="{{ post.cover }}" alt="{{ post.img-description}}">
+        </div>
+        <h2>{{ post.title }}</h2>
+        <p class="post__reading-time">
+            {% assign words = post.content | strip_html | number_of_words %} {% if
+            words <= 200 %} Czas czytania: 1 min {% else %} Czas czytania: {{ words
+            | divided_by: 200 }} min {% endif %}
+        </p>
+    </a>
+</article>
