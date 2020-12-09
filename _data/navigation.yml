@@ -5,3 +5,5 @@ items:
     link: /#oferta
   - name: FAQ
     link: /#faq
+  - name: Blog
+    link: /blog

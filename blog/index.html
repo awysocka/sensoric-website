@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 permalink: /blog/
+image: /assets/images/img_og.png
 pagination: 
   enabled: true
 ---
@@ -13,21 +14,30 @@ pagination:
 </div>
 
 <!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
 <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">
-        Previous
-      </a>
-    {% else %}
-      <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number ">
-      Page: {{ paginator.page }} of {{ paginator.total_pages }}
-    </span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% else %}
-      <span class="next ">Next</span>
-    {% endif %}
-  </div>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}"><i class="fas fa-chevron-circle-left button-prev"></i></a>
+  {% else %}
+    <span><i class="fas fa-chevron-circle-left button-prev"></i></span>
+  {% endif %}
+
+  <ul>
+    {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <li {% if page.url == trail.path %} class="selected"{% endif %}>
+          <a href="{{ trail.path | prepend: site.baseurl | replace: "/index.html", "/" }}" title="{{trail.title}}">{{ trail.num }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+  </ul>
+
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}"><i class="fas fa-chevron-circle-right button-next "></i></a>
+  {% else %}
+    <span><i class="fas fa-chevron-circle-right button-next "></i></span>
+  {% endif %}
+</div>
+{% endif %}
   

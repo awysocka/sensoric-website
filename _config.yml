@@ -1,6 +1,6 @@
-title: "Sensoric - gra online do integracji sensorycznej"
-tagline: "Sensoric to fabularna gra online do integracji sensorycznej dzieci w wieku 4 - 7 lat."
-description: "Sensoric łączy zabawę z ćwiczeniami integracji sensorycznej wspomagając prawidłowy rozwój Twojego dziecka. Gra przeznaczona dla dzieci  w wieku 4 - 7 lat."
+title: "Sensoric"
+tagline: "Pudełko pełne ekologicznych skarbów, co miesiąc z inną zawartością, dzięki którym Twoje dziecko ćwiczy integrację sensoryczną"
+description: "Pudełko pełne ekologicznych skarbów, co miesiąc z inną zawartością, dzięki którym Twoje dziecko ćwiczy integrację sensoryczną. Gra przeznaczona dla dzieci w wieku 4 - 7 lat."
 url: https://sensoric.eu
 author: Sensoric
 facebook:
@@ -50,7 +50,7 @@ pagination:
   enabled: true
   debug: true
   collection: 'posts'
-  per_page: 3
+  per_page: 9
   permalink: '/:num/'
   title: ':title'
   limit: 0
