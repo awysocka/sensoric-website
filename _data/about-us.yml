@@ -1,0 +1,28 @@
+title: O nas
+subtitle: Jesteśmy młodym zespołem, pochodzimy z różnych branży, ale łączy nas jedno — jesteśmy rodzicami i znamy się na integracji sensorycznej jak mało kto! To w połączeniu z naszą pasją do gier i miłością do przyrody pozwoliło nam stworzyć Sensoric — narzędzie do ćwiczeń integracji sensorycznej, którego jako rodzice sami potrzebowaliśmy :)
+items:
+  - name: Dorota Matczak
+    description: Mama 6-letniego Jeremiego
+    img-jpg: /assets/images/dorota.jpg
+    img-webp: /assets/images/dorota.webp
+    alt: Dorota Matczak - pomysłodawczyni Sensoric
+    text: Pomysłodawczyni Sensoric. Fizjoterapeutka, terapeutka metody FITS, terapeutka integracji sensorycznej. Od ponad 10 lat skutecznie łączy teorię z praktyką zapobiegania i leczenia wad postawy u dzieci i młodzieży.
+  - name: Aleksandra Dobrzyńska
+    description: Mama 5-letniego Jurka
+    img-jpg: /assets/images/ola.jpg
+    img-webp: /assets/images/ola.webp
+    alt: Aleksandra Dobrzyńska - współtwórca gry Sensoric
+    text: Certyfikowana terapeutka integracji sensorycznej. Od wielu lat pracuje z dziećmi, łącząc integracje sensoryczną z fizjoterapią. W Sensoric odpowiada za merytoryczną stronę ćwiczeń
+  - name: Tomasz Kizerwetter
+    description: Tata 10-letniego Mikołaja i 3-letniej Oliwki
+    img-jpg: /assets/images/tomasz.jpg
+    img-webp: /assets/images/tomasz.webp
+    alt: Tomasz Kizerwetter - współtwórca gry Sensoric
+    text: Pedagog, absolwent Akademii Wychowania Fizycznego. Od ponad 10 lat pracuje jako nauczyciel dzieci w wieku wczesnoszkolnym. Miłośnik przyrody, w Sensoric odpowiedzialny za tworzenie historii oraz przygotowywanie ćwiczeń.
+  - name: Beata Irzycka
+    description: Mama 2-letniej Julki
+    img-jpg: /assets/images/beata.jpg
+    img-webp: /assets/images/beata.webp
+    alt: Beata Irzycka -  współtwórca gry Sensoric
+    text: Dyplomowana psycholożka i graficzka. W Sensoric sprawuje pieczę nad artystyczną częścią projektu oraz nad tym, by wszystko – od systemu, po najmniejszy komponent każdego boxu – działało tak, jak powinno.
+

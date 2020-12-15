@@ -1,30 +1,20 @@
 <section class="game-boxes" id="game-boxes">
     <div class="game-boxes__wrapper">
-        <h2 class="heading-secondary">Co nas wyróżnia?</h2>
+        <h2 class="heading-secondary">{{ site.data.about-game-boxes.title }}</h2>
         <ul class="game-boxes__list">
+            {% for item in site.data.about-game-boxes.items %}
             <li class="game-boxes__item">
-                <span class="game-boxes__icon"><i class="fas fa-comments"></i></span>
-                <h3 class="heading-tertiary">Fabuła</h3>
-                <p class="paragraph paragraph--center">Wkręćcie się w historię i ćwiczcie razem z naszym bohaterem, rozbudzając ciekawość i motywację
-                </p>
+                <span class="game-boxes__icon"><i class="{{ item.icon }}"></i></span>
+                <h3 class="heading-tertiary">{{ item.name }}</h3>
+                <p class="paragraph paragraph--center">{{ item.text }}</p>
             </li>
-            <li class="game-boxes__item">
-                <span class="game-boxes__icon"><i class="fas fa-heart"></i></span>
-                <h3 class="heading-tertiary">Relacja</h3>
-                <p class="paragraph paragraph--center">Pogłębiaj więź ze swoim dzieckiem poprzez wspólną zabawę, która wesprze jego prawidłowy i szybki rozwój!
-                </p>
-            </li>
-            <li class="game-boxes__item">
-                <span class="game-boxes__icon"><i class="fas fa-gamepad"></i></span>
-                <h3 class="heading-tertiary">Zabawa</h3>
-                <p class="paragraph paragraph--center">Grajcie w grę stworzoną przez fizjoterapeutów, pedagogów i psychologów, którzy też są rodzicami!</p>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </section>
 <div class="divider">
-    <p class="paragraph divider__paragraph">„Z mojego doświadczenia wynika, że mali klienci chętniej ćwiczą, jeśli ich działanie ma jakiś cel, a gdy dziecko może w pożyteczny sposób korzystać z nowych technologii, jego motywacja wzrasta jeszcze bardziej. Sensoric łączy w sobie celowość i technologię, dostarcza różnorodnych, rzeczywistych bodźców, których dziecko potrzebuje do prawidłowego rozwoju”.
-        <span class="divider__signature">Aleksandra Dobrzyńska</span>
-        <span class="divider__signature">nasza specjalistka ds. Integracji Sensorycznej</span>
+    <p class="paragraph divider__paragraph">{{ site.data.about-game-boxes.quotation.text }}
+        <span class="divider__signature">{{ site.data.about-game-boxes.quotation.name }}</span>
+        <span class="divider__signature">{{site.data.about-game-boxes.quotation.description }}</span>
     </p>
 </div>

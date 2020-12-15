@@ -1,0 +1,170 @@
+backend:
+  name: gitlab
+  repo: awysocka/sensoric # Path to GitLab repository
+  #auth_type: implicit # Required for implicit grant
+  #app_id: 8826f1f3bcecb94a4d64185c52dbdeee85da63d94ea7636cc83bf1ad5347922a # Application ID from GitLab settings
+  
+publish_mode: editorial_workflow
+logo_url: https://anna.you2.pl/assets/images/logo_sensoric.png
+media_folder: "assets/images/uploads" 
+
+collections:
+- name: "posts" # Used in routes, e.g., /admin/collections/blog
+  label: "Posts" # Used in the UI
+  folder: "_posts" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  label_singular: post
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Image", name: "image", widget: "image"}
+    - {label: "Image description", name: "img-description", widget: "string"}
+    - {label: "Description", name: "description", widget: "string"}
+    - {label: "Title", name: "title", widget: "string", required: true}
+    - {label: "Body", name: "body", widget: "markdown", required: true}
+
+- name: "pages"
+  label: "Pages"
+  files:
+    - file: "/cookies.md"
+      label: "Cookies"
+      name: "cookies"
+      fields:
+        - {label: "Body", name: "body", widget: "markdown"}
+    - file: "/legal-information.md"
+      label: "Legal-information"
+      name: "legal-information"
+      fields:
+        - {label: "Body", name: "body", widget: "markdown"}
+    - file: "/privacy-policy.md"
+      label: "Privacy-policy.md"
+      name: "privacy-policy.md"
+      fields:
+        - {label: "Body", name: "body", widget: "markdown"}
+    - file: "/regulations.md"
+      label: "Regulations.md"
+      name: "regulations.md"
+      fields:
+        - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "sections"
+  label: "Sections"
+  editor:
+    preview: false
+  files:
+    - name: "navigation-button"
+      label: "Navigation-button"
+      file: "_data/navigation.yml"
+      fields:
+      - name: "login-button"
+        label: "Login-button" 
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Url, name: url, widget: string}
+      - name: "register-button"
+        label: "Register-button" 
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Url, name: url, widget: string}
+    - name: "hero"
+      label: "Hero"
+      file: "_data/hero-section.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+    - name: "about-game"
+      label: "About-game"
+      file: "_data/about-game-section.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Text, name: text, widget: string}
+        - {label: Url, name: url, widget: string}
+    - name: "about-game-boxes"
+      label: "About-game-boxes"
+      file: "_data/about-game-boxes.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Icon, name: icon, widget: string}
+            - {label: Text, name: text, widget: string}
+        - name: quotation
+          label: Quotation
+          widget: list
+          fields:
+            - {label: Text, name: text, widget: string}
+            - {label: Name, name: name, widget: string}
+            - {label: Description, name: description, widget: string}
+    - name: "product-adventages"
+      label: "Product-adventages"
+      file: "_data/product-adventages.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - {label: Text, name: text, widget: string}
+        - name: price
+          label: Price
+          widget: list
+          fields:
+            - {label: Prefix, name: prefix, widget: string}
+            - {label: Price, name: price, widget: number}
+            - {label: Sufix, name: sufix, widget: string}
+            - {label: Button, name: button, widget: string}
+    - name: "testimonials"
+      label: "Testimonials"
+      file: "_data/testimonial.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Img, name: img, widget: image}
+            - {label: Text, name: text, widget: string}
+    - name: "about-us"
+      label: "About-us"
+      file: "_data/about-us.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Description, name: description, widget: string}
+            - {label: Img-jpg, name: img-jpg, widget: image}
+            - {label: Img-webp, name: img-webp, widget: image}
+            - {label: Alt, name: alt, widget: string}
+            - {label: Text, name: text, widget: string}
+    - name: "faq"
+      label: "FAQ"
+      file: "_data/faq.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - {label: Question, name: question, widget: string}
+            - {label: Answer, name: answer, widget: string}
+    - name: "product-page"
+      label: "Product-page"
+      file: "_data/product-page.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Text, name: text, widget: string}
+        - {label: Description, name: description, widget: string}
+        - {label: Button, name: button, widget: string}
+  
+
+            
+  
