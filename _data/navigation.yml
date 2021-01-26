@@ -5,3 +5,11 @@ items:
     link: /#oferta
   - name: FAQ
     link: /#faq
+  - name: Blog
+    link: /blog
+login-button:
+  name: Zaloguj się
+  url: https://app.sensoric.eu
+register-button:
+  name: Załóż konto
+  url: https://app.sensoric.eu/account/register

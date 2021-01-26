@@ -1,0 +1,54 @@
+.posts__wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.pagination {
+    text-align: center;
+    margin: 2rem;
+    color: $color-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        font-size: $font-size-l;
+    }
+
+    li {
+        margin: 0 1rem;
+        color: $color-grey;
+    }
+
+    i {
+        margin: 0 2rem;
+        font-size: $font-size-xl;
+        color: $color-light-grey;
+        transition: all .3s ease;
+    }
+
+    .selected {
+        color: $color-red;
+        font-weight: 600;
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .pagination {
+        i:hover {
+            color: $color-red;
+        }
+    }
+
+    li:hover {
+        color: $color-red;
+    }
+}

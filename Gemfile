@@ -11,4 +11,5 @@ group :jekyll_plugins do
     gem 'jekyll-seo-tag'
     gem 'jekyll-minifier'
     gem 'jekyll-autoprefixer'
+    gem 'jekyll-paginate-v2'
 end

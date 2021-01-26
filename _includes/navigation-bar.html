@@ -9,8 +9,8 @@
                     </li>
                 {% endfor %}
             </ul>
-            <a href="https://app.sensoric.eu" class="navigation__button navigation__button--no-border">Zaloguj się</a>
-            <a href="https://app.sensoric.eu/account/register" class="navigation__button navigation__button--highlighted">Załóż konto</a>
+            <a href="{{ site.data.navigation.login-button.url }}" class="navigation__button navigation__button--no-border">{{ site.data.navigation.login-button.name }}</a>
+            <a href="{{ site.data.navigation.register-button.url }}" class="navigation__button navigation__button--highlighted">{{ site.data.navigation.register-button.name }}</a>
         </div> 
         {% include hamburger-menu.html %}
     </div>

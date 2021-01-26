@@ -1,21 +1,18 @@
 <section class="about-product" id="oferta">
     <div class="about-product__wrapper">
-        <h2 class="heading-secondary">Rozpocznij przygodę teraz!</h2>
+        <h2 class="heading-secondary">{{ site.data.product-adventages.title }}</h2>
         <div class="about-product__content">
                 {% include carousel.html %}
             <div class="about-product__description">
-               <h3 class="heading-tertiary">Sensoric to:</h3>
-               <ul class="about-product__list">
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">zestaw fabularyzowanych ćwiczeń w formie animacji</p></li>
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">3 ćwiczenia dziennie, 12 dni w miesiącu</p></li>
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">ok. 20 min zabawy każdego dnia</p></li>
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">mix ćwiczeń kreatywnych, plastycznych i ruchowych</p></li>
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">nowy miesiąc – nowe pudełko, nowe przygody</p></li>
-                   <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">przybory z bezpiecznych, ekologicznych materiałów</p></li>
+                <h3 class="heading-tertiary">{{ site.data.product-adventages.subtitle }}</h3>
+                <ul class="about-product__list">
+                    {% for item in site.data.product-adventages.items %}
+                        <li class="about-product__item"><i class="fas fa-circle"></i><p class="paragraph">{{ item.text }}</p></li>
+                    {% endfor %}
                 </ul>
-                <p class="paragraph price"><span>cena: </span>129<span>zł/miesiąc 
+                <p class="paragraph price"><span>{{ site.data.product-adventages.price.prefix}} </span>{{ site.data.product-adventages.price.value }}<span>{{ site.data.product-adventages.price.sufix}} 
                 </span></p>
-                <a href="/strona-produktu" class="about-product__button" id="order-button">Zamów</a> 
+                <a href="/strona-produktu" class="about-product__button" id="order-button">{{ site.data.product-adventages.button }}</a> 
             </div>
         </div>
     </div>

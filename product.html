@@ -1,6 +1,6 @@
 --- 
 layout: page
-title: Sensoric
+title: Gra
 image: /assets/images/img_og.png
 permalink: /strona-produktu/
 display-title: false
@@ -15,11 +15,11 @@ display-title: false
     </video>
     
     <div class="product__content">
-        <h3 class="heading-tertiary">Sensoric</h3>
-        <p class="paragraph product__description">Sensoric to comiesięczny dostęp do nowych animowanych materiałów online oraz specjalny box z akcesoriami niezbędnymi do wykonania wszystkich naszych ćwiczeń. W jego skład wchodzą przybory plastyczno-techniczne oraz naturalne komponenty, które idealnie połączą kreatywną zabawę z ćwiczeniami integracji sensorycznej, tak istotnej dla prawidłowego rozwoju każdego malucha!</p>
-        <p class="paragraph price"><span>cena: </span>129<span>zł/miesiąc 
+        <h3 class="heading-tertiary">{{ site.data.product-page.title }}</h3>
+        <p class="paragraph product__description">{{ site.data.product-page.text }}</p>
+        <p class="paragraph price"><span>{{ site.data.product-adventages.price.prefix }} </span>{{ site.data.product-adventages.price.value }}<span>{{ site.data.product-adventages.price.sufix }}
         </span></p>
-        <p class="paragraph price-description">(dostęp do animowanych treści online + box z nowymi materiałami każdego miesiąca)</p>
-        <a href="https://app.sensoric.eu" class="button">Zamów Sensoric</a>
+        <p class="paragraph price-description">{{ site.data.product-page.description }}</p>
+        <a href="https://app.sensoric.eu" class="button">{{ site.data.product-page.button }}</a>
     </div>
 </div>

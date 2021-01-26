@@ -157,3 +157,7 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.button-prev',
   },
 });
+
+if (document.querySelector('.mediabox')) {
+  MediaBox('.mediabox');
+}

@@ -59,6 +59,6 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)cookies_accepted\s*\=\s*([^;]*).*$)|
 }
 
 
-if (document.querySelector('.mediabox')) {
-  MediaBox('.mediabox');
-}
+// if (document.querySelector('.mediabox')) {
+//   MediaBox('.mediabox');
+// }
