@@ -74,41 +74,46 @@ agreementCheckbox.addEventListener('input', agreementInputValidation );
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  if (nameInputValidation() 
-      && mailInputValidation() 
-      && messageInputValidation() 
-      && agreementInputValidation()
-  ) {
-    const data = {
-      name: nameInput.value,
-      email: emailInput.value,
-      phoneNumber: phoneNumberInput.value,
-      message: messageInput.value,
-      agreement: agreementCheckbox.checked
-    }
-  
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-  
-    fetch('mail.php', options)
-      .then(response => {
-        if (response.status === 200) {
-          form.classList.add('hidden');
-          successfulSubmitMessage.classList.remove('hidden');
-          contactFormTitle.textContent = 'Potwierdzenie wysłania formularza';
-        } else {
-          submitResponse.innerText = 'Nie udało się wysłać wiadomości. Spróbuj jeszcze raz.';
-          console.error('error response: ', response);
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LfV4-8ZAAAAAMs8kCB1cLxw4yg1bdLqUAaVF6MJ', {action: 'contact_form_submit'}).then(function(token) {
+      if (nameInputValidation() 
+        && mailInputValidation() 
+        && messageInputValidation() 
+        && agreementInputValidation()) {
+        
+        const data = {
+          name: nameInput.value,
+          email: emailInput.value,
+          phoneNumber: phoneNumberInput.value,
+          message: messageInput.value,
+          agreement: agreementCheckbox.checked,
+          gr_token: token
+        };
+      
+        const options = {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        };
+      
+        fetch('mail.php', options)
+          .then(response => {
+            if (response.status === 200) {
+              form.classList.add('hidden');
+              successfulSubmitMessage.classList.remove('hidden');
+              contactFormTitle.textContent = 'Potwierdzenie wysłania formularza';
+            } else {
+              submitResponse.innerText = 'Nie udało się wysłać wiadomości. Spróbuj jeszcze raz.';
+              console.error('error response: ', response);
+            }
+          })
+          .catch(error => {
+            submitResponse.innerText = 'Nie udało się wysłać wiadomości. Spróbuj jeszcze raz.';
+            console.error('error: ', error);
+          });
         }
-      })
-      .catch(error => {
-        submitResponse.innerText = 'Nie udało się wysłać wiadomości. Spróbuj jeszcze raz.';
-        console.error('error: ', error);
-      });
-  }
+    });
+  });
 });

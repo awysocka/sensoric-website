@@ -1,4 +1,4 @@
-# egologia-blog
+# sensoric
 Website with product for kids. 
 
 ## technologies
@@ -9,7 +9,7 @@ Website with product for kids.
 * js (ES6)
 
 ## live
-* Here is a working website: available soon.
+* Here is a working website: https://sensoric.eu/
 
 ## status
 * in progress

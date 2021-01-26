@@ -2,7 +2,7 @@
     <div class="faq__wrapper">
         <h2 class="heading-secondary">{{ site.data.faq.title }}</h2>
         <ul class="faq__list">
-            {% for item in site.data.faq.items %}
+            {% for item in site.data.faq.items | limit: 5 %}
             <li class="faq__list-item">
                 <a href="#" class="faq__link">
                     {{ item.question }}

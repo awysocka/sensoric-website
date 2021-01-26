@@ -9,6 +9,6 @@ items:
   - text: przybory z bezpiecznych, ekologicznych materiałów
 price: 
   prefix: "cena:"
-  value: 129
+  value: "129"
   sufix: zł/miesiąc 
 button: Zamów

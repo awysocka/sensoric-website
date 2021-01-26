@@ -13,7 +13,7 @@ error_reporting(E_ALL & ~E_NOTICE);
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Formularz kontaktowy <kontakt@sensoric.eu>';
+$from = 'Formularz kontaktowy Sensoric <kontakt@sensoric.eu>';
 
 // an email address that will receive the email with the output of the form
 $sendTo = 'Sensoric <kontakt@sensoric.eu>';
@@ -68,6 +68,10 @@ $mustBeValidEmailAddressValidationMessage = "musi zawierać poprawny adres email
 
 $mustBeTrueValidationMessage = "musi zawierać wartość true";
 
+$noRecaptchaTokenValidationMessage = 'Brak tokenu reCaptcha';
+
+$invalidRecaptchaTokenValidationMessage = 'Błąd weryfikacji reCaptcha';
+
 
 /*
  *  IMPLEMENTATION
@@ -91,7 +95,9 @@ function validateRequest() {
            $formField,
            $canNotBeEmptyValidationMessage,
            $mustBeValidEmailAddressValidationMessage,
-           $mustBeTrueValidationMessage;
+           $mustBeTrueValidationMessage,
+           $noRecaptchaTokenValidationMessage,
+           $invalidRecaptchaTokenValidationMessage;
 
     if ($_SERVER["REQUEST_METHOD"] !== "POST") {
         throw new ValidationException($invalidRequestMethodValidationMessage);
@@ -104,6 +110,25 @@ function validateRequest() {
 
     if (count($_POST) === 0) {
         throw new ValidationException($emptyFormValidationMessage);
+    }
+
+    if (!isset($_POST['gr_token'])) {
+        throw new ValidationException($noRecaptchaTokenValidationMessage);
+    }
+
+    // Build POST request:
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_secret = 'RECAPTCHA_SECRET_KEY';
+    $recaptcha_response = $_POST['gr_token'];
+
+    // Make and decode POST request:
+    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+    $recaptcha = json_decode($recaptcha);
+
+    // Take action based on the score returned:
+    if ($recaptcha->score < 0.5) {
+        // Not verified - show form error
+        throw new ValidationException($invalidRecaptchaTokenValidationMessage);
     }
 
     foreach ($fields as $key => $label) {

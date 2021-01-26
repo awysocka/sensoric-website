@@ -36,6 +36,7 @@ autoprefixer:
 
 exclude:
   - build.sh
+  - README.md
 
 defaults:
   -
@@ -44,7 +45,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: "/blog/:year/:month/:title/"
+      permalink: "/artykuly/:year/:month/:title/"
+      markdown: true
 
 pagination:
   enabled: true

@@ -8,5 +8,11 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    import CMS from 'netlify-cms-app';
+    import { pl } from 'netlify-cms-locales';
+
+    CMS.registerLocale('pl', pl);
+  </script>
 </body>
 </html>

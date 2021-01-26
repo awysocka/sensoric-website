@@ -1,0 +1,12 @@
+<section class="highlighted-posts" id="artykuly">
+    <div class="highlighted-posts__wrapper">
+        <h2 class="heading-secondary">Artykuły</h2>
+        <div class="highlighted-posts__container">
+            {% assign highlighted-posts = site.posts | where: "highlighted", "true" %}
+            {% for post in highlighted-posts | limit: 3 %}
+                {% include post-box.html %}
+            {% endfor %}
+        </div>
+        <a href="/artykuly" class="highlighted-posts__button">czytaj więcej</a>
+    </div>
+</section>

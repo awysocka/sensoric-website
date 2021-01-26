@@ -3,10 +3,11 @@ items:
     link: /#poznaj-gre
   - name: Oferta
     link: /#oferta
+  - name: Artykuły
+    link: /#artykuly
   - name: FAQ
     link: /#faq
-  - name: Blog
-    link: /blog
+
 login-button:
   name: Zaloguj się
   url: https://app.sensoric.eu

@@ -15,15 +15,20 @@
         max-height: 500px;
         border-radius: $box-radius;
         overflow: hidden;
-        margin: 4rem 0;
+        margin: 4rem 0 2rem;
 
         img {
             width: 100%;
         }
     }
 
+    &__content {
+        width: 100%;
+    }
+
     .heading-primary {
         max-width: 100%;
+        text-align: left;
     }
 }
 
@@ -37,6 +42,15 @@
 
         &__content {
             width: 80%;
+            max-width: 760px;
+        }
+
+        &__img {
+            margin: 4rem 0;
+        }
+
+        .heading-primary {
+            text-align: center;
         }
     }
 }

@@ -1,0 +1,51 @@
+# pipeline stages
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: "ruby:2.6"
+  cache:
+    paths:
+    - vendor/ruby
+  cache:
+    key:
+      files:
+      - Gemfile.lock
+    paths:
+    - vendor/ruby
+  before_script:
+  # Print out ruby version for debugging
+  - ruby -v
+  # Print out rubygem version for debugging
+  - gem -v
+  # Upgrade bundle. The default version is 1.17.x.
+  - gem install bundler --version '~> 2.1.4'
+  # Print out bundle version for debugging
+  - bundle -v
+  # Install dependencies into ./vendor/ruby
+  - bundle install -j $(nproc) --path vendor
+  script:
+  - JEKYLL_ENV=production bundle exec jekyll build --trace
+  - sed -i "s/RECAPTCHA_SECRET_KEY/$RECAPTCHA_SECRET_KEY/g" _site/kontakt/mail.php
+  artifacts:
+    paths:
+    - _site
+  interruptible: true
+  only:
+  - master
+
+deploy:
+  type: deploy
+  stage: deploy
+  needs: [build]
+  environment: production
+  resource_group: production
+  image:
+    name: alpacadb/docker-lftp
+    entrypoint: [""]
+  script:
+  - lftp -e "set ftp:ssl-allow no; open $FTP_URL; user $FTP_USERNAME $FTP_PASSWORD; mirror --reverse --parallel=10 --verbose --delete --exclude ^\..+$ --exclude gra/ _site/ public_html/; bye"
+  only:
+  - master
